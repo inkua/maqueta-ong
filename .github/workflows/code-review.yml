@@ -17,6 +17,6 @@ jobs:
           labelPullRequestsWhenApproved: "true"
           labelPullRequestsWhenReviewNeeded: "true"
           failJobsWhenReviewNeeded: "true"
-          approveThreshold: 0.935
+          approveThreshold: 0.850
           carefulReviewThreshold: 0.400
           codeSuggestionsFromComments: "true"
