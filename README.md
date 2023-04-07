@@ -36,33 +36,14 @@ The project structure is as follows:
 │   ├── manifest.json
 │   └── robots.txt
 └── src
-    ├── App.js
-    ├── App.test.js
-    ├── components
-    │   ├── About
-    │   │   ├── About.js
-    │   │   └── About.module.css
-    │   ├── Contact
-    │   │   ├── Contact.js
-    │   │   └── Contact.module.css
-    │   ├── Footer
-    │   │   ├── Footer.js
-    │   │   └── Footer.module.css
-    │   ├── Home
-    │   │   ├── Home.js
-    │   │   └── Home.module.css
-    │   ├── Navbar
-    │   │   ├── Navbar.js
-    │   │   └── Navbar.module.css
-    │   ├── Projects
-    │   │   ├── Projects.js
-    │   │   └── Projects.module.css
-    │   └── Team
-    │       ├── Team.js
-    │       └── Team.module.css
+    ├── App.css
+    ├── App.test.tsx
+    ├── App.tsx
     ├── index.css
-    ├── index.js
+    ├── index.tsx
+    ├── index.tsx
     ├── logo.svg
+    ├── react-app-env.d.ts
     ├── reportWebVitals.js
-    └── setupTests.js
+    └── setupTests.ts
 ```
