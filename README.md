@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Link: https://www.figma.com/file/idsSDiMUJJJ7IwkkUZWtk5/Web-inkua?node-id=0-1
 
-## How to start 
+## How to start  
 
 Clone the repository and install the dependencies
 ```
