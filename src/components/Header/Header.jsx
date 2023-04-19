@@ -1,6 +1,9 @@
-import "bootstrap/dist/css/bootstrap.css";
-import logo from "../assets/logo.png";
-
+import Image from "next/image";
+import logo from "assets/logo.png";
+/**
+ * @todo style component Image
+ * @see https://dev.to/david4473/working-with-images-in-next-js-48d6
+ */
 function Header() {
   return (
     <header className="container-fluid">
@@ -13,7 +16,7 @@ function Header() {
             href="#top"
             className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis"
           >
-            <img src={logo} alt="" width={30} height={30} className="bi me-2" />
+            <Image src={logo} alt="" width={30} height={30} className="bi me-2" />
           </a>
 
           <ul className="nav nav-pills">

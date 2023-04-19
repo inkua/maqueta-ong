@@ -1,0 +1,1 @@
+carpeta para poner solo los estilos globales
