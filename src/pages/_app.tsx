@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Layout from 'components/Layout/Layout';
 import Header from 'components/Header/Header';
 import "bootstrap/dist/css/bootstrap.css";
+import 'styles/globals.css'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (

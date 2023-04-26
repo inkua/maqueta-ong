@@ -1,0 +1,189 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 25px 10px;
+}
+
+.footer__title {
+  display: none;
+}
+
+.footer__logo-mobile {
+  width: 86px;
+  height: 84px;
+}
+
+.footer__socialmedia {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.socialmedia__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.socialmedia__link:hover {
+  color: #000000;
+  font-weight: 500;
+}
+
+.socialmedia__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.socialmedia__text {
+  display: none;
+}
+
+.footer__diviser {
+  display: none;
+}
+
+.footer__buttons {
+  flex-grow: 1;
+  align-self: end;
+}
+
+.footer__diviser,
+.footer__buttons {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.footer__logo-desktop {
+  display: none;
+}
+
+.divider__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer__button {
+  width: 87px;
+  border: none;
+  padding: 2px 0;
+  border: 3px solid #2a2a2a;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.footer__button {
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.footer__button:hover {
+  transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  -o-transform: translateY(-3px);
+}
+
+.button__help {
+  background-color: transparent;
+}
+
+.button__help:hover {
+  background-color: #898989;
+  color: #ffffff;
+}
+
+.button__donate {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.button__donate:hover {
+  background-color: #000000;
+}
+
+@media (min-width: 425px) {
+  .footer__button {
+    width: 40%;
+  }
+}
+
+@media (min-width: 640px) {
+  .footer {
+    flex-direction: column;
+    padding: 30px 80px;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer__title {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .footer__logo-mobile {
+    display: none;
+  }
+
+  .footer__socialmedia {
+    flex-direction: row;
+    gap: 70px;
+  }
+
+  .socialmedia__icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .socialmedia__text {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  .footer__diviser {
+    display: block;
+    background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0.05) 0%,
+      #000000 51.36%,
+      rgba(0, 0, 0, 0.05) 100%
+    );
+    width: 100%;
+    height: 3px;
+  }
+
+  .footer__buttons {
+    flex-grow: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer__logo-desktop {
+    display: inline;
+  }
+
+  .divider__buttons {
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+    width: 50%;
+  }
+
+  .footer__button {
+    width: 40%;
+    padding: 8px;
+    max-width: 150px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+  }
+}
