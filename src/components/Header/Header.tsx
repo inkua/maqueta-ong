@@ -1,10 +1,10 @@
 import Image from "next/image";
-import logo from "assets/logo.png";
+import DATA from 'data/ong';
 /**
  * @todo style component Image
  * @see https://dev.to/david4473/working-with-images-in-next-js-48d6
  */
-function Header() {
+const Header = () => {
   return (
     <header className="container-fluid">
       <div className="container">
@@ -16,7 +16,7 @@ function Header() {
             href="#top"
             className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis"
           >
-            <Image src={logo} alt="" width={30} height={30} className="bi me-2" />
+            <Image src={DATA.logo} alt="" width={30} height={30} className="bi me-2" />
           </a>
 
           <ul className="nav nav-pills">
@@ -58,7 +58,7 @@ function Header() {
             <input type="checkbox" id="switcher" />
             <label htmlFor="switcher" data-checked="EN" data-unchecked="UKY" className="check"></label>
           </div>
-          
+
         </div>
       </div>
     </header>
