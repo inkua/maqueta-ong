@@ -17,6 +17,16 @@ const DATA = {
     instagram: "ONG'S INSTAGRAM",
   },
   logo: ong_logo,
+  styles: {
+    colors: {
+      primary: '#D9D9D9', //color for navbar, footer, inputs,
+      card: '#5D5F60', //color for cards and accordion
+      button: '#2A2A2A', //color for buttons and borders
+      buttonLang: '#474849', //color for button to change languaje
+      fontColorPrimary: '#000000',
+      fontColorSecondary: '#FFFFFF',
+    }
+  }
 }
 
 export default DATA;
