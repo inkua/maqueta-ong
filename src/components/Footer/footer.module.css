@@ -22,7 +22,7 @@
 
 .socialmedia__link {
   text-decoration: none;
-  color: #000000;
+  color: var(--color-font-primary);
 }
 
 .socialmedia__link:hover {
@@ -68,7 +68,7 @@
   width: 87px;
   border: none;
   padding: 2px 0;
-  border: 3px solid #2a2a2a;
+  border: 3px solid var(--color-button);
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
