@@ -11,7 +11,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <Head>
       <title>Maqueta ONG</title>
     </Head>
-      <Header></Header>
       <Component {...pageProps} />
     </Layout>
   )

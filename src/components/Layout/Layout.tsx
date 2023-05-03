@@ -1,9 +1,10 @@
-import Footer from "components/Footer/Footer"
+import Footer from "components/Footer/Footer";
+import Header from '../Header/Header';
 
 const Layout: React.FC<ChildrenProps> = ({ children }) => {
   return (
     <>
-      <nav>Este es el navbar</nav>
+      <Header />
       <main>{children}</main>
       <Footer />
     </>

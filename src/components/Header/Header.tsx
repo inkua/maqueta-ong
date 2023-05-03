@@ -1,68 +1,110 @@
 import Image from "next/image";
-import DATA from 'data/ong';
+import DATA from "data/ong";
+import Navitem from "../Header/Navitem";
+import Link from "next/link";
+import { useState } from "react";
+import logo from "../../assets/ong-logo.png";
 /**
  * @todo style component Image
  * @see https://dev.to/david4473/working-with-images-in-next-js-48d6
  */
+
+const Menu_List = [
+  {
+    texto: "Home",
+    href: "#top",
+  },
+  {
+    texto: "About Us",
+    href: "#top",
+  },
+  {
+    texto: "News",
+    href: "#top",
+  },
+  {
+    texto: "Volunteer",
+    href: "#top",
+  },
+];
+
 const Header = () => {
+  const [navActive, setNavActive] = useState(false);
+  const [activeIdx, setActiveIdx] = useState(0);
   return (
-    <header className="container-fluid">
+    <header>
       <div className="container">
-        <div
-          id="header"
-          className="d-flex flex-wrap justify-content-center py-3 mb-4"
-        >
-          <a
-            href="#top"
-            className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis"
-          >
-            <Image src={DATA.logo} alt="" width={30} height={30} className="bi me-2" />
-          </a>
-
-          <ul className="nav nav-pills">
-            <li className="nav-item">
-              <a href="#top" className="nav-link px-2 text-dark">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#top" className="nav-link px-2 text-dark">
-                About Us
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#top" className="nav-link px-2 text-dark">
-                News
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#top" className="nav-link px-2 text-dark">
-                Volunteer
-              </a>
-            </li>
-          </ul>
-
-          <div
-            id="buttons"
-            className="d-flex justify-content-center align-items-center gap-2"
-          >
-            <input
-              type="button"
-              value="Get Help"
-              className="btn btn-outline-dark"
-            />
-            <input type="button" value="Volunteer" className="btn btn-dark" />
-          </div>
-
-          <div className="d-flex align-items-center justify-content-center " id="wrap-toggle">
-            <input type="checkbox" id="switcher" />
-            <label htmlFor="switcher" data-checked="EN" data-unchecked="UKY" className="check"></label>
-          </div>
-
+        <div className="logo">
+          <Link href = {"/"} legacyBehavior>
+            <a onClick = { () => setActiveIdx(0) }>
+              <Image src = { logo } alt="logo" />
+            </a>
+          </Link>
         </div>
+
+        <nav className="nav">
+
+          <div className = "nav__menu-bar" onClick = { () => setNavActive(!navActive) }>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div className = { `${navActive ? "active" : ""} nav__mennu-list` }>
+            {
+              Menu_List.map((menu, idx) => {
+                return(
+                  <div key = {menu.texto} onClick = { () => {
+                    setActiveIdx(idx);
+                    setNavActive(false);
+                  }}>
+                    <Navitem active = { activeIdx === idx } { ...menu } />
+                  </div>
+                )
+              })
+            }
+          </div>
+
+          <div className="buttons">
+            <input type="button" value="Get Help" className="btn_help" />
+            <input type="button" value="VOLUNTEER" className="btn_volunteer"/>
+            <div className="wrap-toggle">
+              <input type="checkbox" id="switcher" />
+              <label htmlFor="switcher" data-checked="EN" data-unchecked="UKY" className="check"></label>
+            </div>
+          </div>
+        </nav>
       </div>
+      {/* <nav className="nav">
+        <Link href={"/"} legacyBehavior>
+          <a onClick={ () => setActiveIdx(0)}>
+            <Image src={ logo } alt="logo"  width={40} height={40}/>
+          </a>
+        </Link>
+
+        <div className="nav__menu-bar" onClick={ () => setNavActive(!navActive) }>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div className={ `${navActive ? "active" : ""} nav__menu-list` }>
+          {
+            Menu_List.map((menu, idx) =>{
+              return(
+                <div key={menu.texto} onClick={ () => {
+                  setActiveIdx(idx);
+                  setNavActive(false);
+                }}>
+                  <Navitem active={ activeIdx === idx} {...menu} />
+                </div>
+              )
+            })
+          }
+        </div>
+      </nav> */}
     </header>
   );
-}
+};
 
 export default Header;
