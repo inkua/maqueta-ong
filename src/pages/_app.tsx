@@ -1,9 +1,9 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Layout from 'components/Layout/Layout';
-import Header from 'components/Header/Header';
 import "bootstrap/dist/css/bootstrap.css";
-import 'styles/globals.css'
+import 'styles/globals.css';
+import '../styles/header.css';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (

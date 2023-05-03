@@ -50,7 +50,7 @@ const Header = () => {
             <div></div>
           </div>
 
-          <div className = { `${navActive ? "active" : ""} nav__mennu-list` }>
+          <div className = { `${navActive ? "active" : ""} nav__menu-list` }>
             {
               Menu_List.map((menu, idx) => {
                 return(
@@ -73,6 +73,7 @@ const Header = () => {
               <label htmlFor="switcher" data-checked="EN" data-unchecked="UKY" className="check"></label>
             </div>
           </div>
+          
         </nav>
       </div>
       {/* <nav className="nav">
