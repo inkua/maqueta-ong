@@ -1,4 +1,4 @@
-import Footer from "components/Footer/Footer"
+import Footer from "@Component/Footer"
 
 const Layout: React.FC<ChildrenProps> = ({ children }) => {
   return (
@@ -10,4 +10,4 @@ const Layout: React.FC<ChildrenProps> = ({ children }) => {
   )
 }
 
-export default Layout
+export default Layout;

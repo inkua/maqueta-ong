@@ -1,4 +1,4 @@
-import Accordion from "components/Accordion/Accordion"
+import Accordion from "@Component/Accordion"
 
 const GetHelp = () => {
   //data for tests
