@@ -7,7 +7,7 @@ import Link from 'next/link';
 import DATA from 'data/ong';
 const Footer = () => {
   return (
-    <footer className={`${styles.footer} bg-gray`}>
+    <footer className={`${styles.footer} bg-color-primary`}>
       <h3 className={styles.footer__title}>{DATA.name}</h3>
       <Image src={DATA.logo} width={86} height={84} alt='Logo' className={`${styles['footer__logo-mobile']} bg-black-primary`} />
       <div className={styles.footer__socialmedia}>

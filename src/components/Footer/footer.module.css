@@ -22,11 +22,11 @@
 
 .socialmedia__link {
   text-decoration: none;
-  color: #000000;
+  color: var(--color-font-primary);
 }
 
 .socialmedia__link:hover {
-  color: #000000;
+  color: var(--color-font-primary);
   font-weight: 500;
 }
 
@@ -68,7 +68,7 @@
   width: 87px;
   border: none;
   padding: 2px 0;
-  border: 3px solid #2a2a2a;
+  border: 3px solid var(--color-button);
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -92,16 +92,17 @@
 
 .button__help {
   background-color: transparent;
+  color: var(--color-font-primary);
 }
 
 .button__help:hover {
   background-color: #898989;
-  color: #ffffff;
+  color: var(--color-font-secondary);
 }
 
 .button__donate {
-  background-color: #2a2a2a;
-  color: #ffffff;
+  background-color: var(--color-button);
+  color: var(--color-font-secondary);
 }
 
 .button__donate:hover {
@@ -125,6 +126,7 @@
   .footer__title {
     display: block;
     margin-bottom: 20px;
+    color: var(--color-font-primary);
   }
 
   .footer__logo-mobile {
@@ -144,6 +146,7 @@
   .socialmedia__text {
     display: inline-block;
     margin-left: 8px;
+    color: var(--color-font-primary);
   }
 
   .footer__diviser {

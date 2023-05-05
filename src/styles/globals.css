@@ -1,7 +1,33 @@
-.bg-black-primary {
-  background-color: #2a2a2a;
+/*
+Variable name:
+--color-primary
+--color-card
+--color-button
+--color-button-lang
+--color-font-primary
+--color-font-secondary
+*/
+
+.bg-color-primary {
+  background-color: var(--color-primary);
 }
 
-.bg-gray {
-  background-color: #d9d9d9;
+.bg-card {
+  background: var(--color-card);
+}
+
+.bg-button {
+  background: var(--color-button);
+}
+
+.bg-button-lang {
+  background: var(--color-button-lang);
+}
+
+.font-color-primary {
+  color: var(--color-font-primary);
+}
+
+.font-color-secondary {
+  color: var(--color-font-secondary);
 }
