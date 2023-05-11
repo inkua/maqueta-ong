@@ -274,7 +274,7 @@ input[type=checkbox]#switcher:checked+.check::before
         width: 288px;
         row-gap: 24px;
         padding: 24px 16px;
-        right: -288px;
+        left: -288px;
         min-height: calc(100% - 60px);
         background: #eee;
         transition: all .3s;
@@ -282,7 +282,7 @@ input[type=checkbox]#switcher:checked+.check::before
 
     .nav__menu-list.active
     {
-        right: 0;
+        left: 0;
     }
 
     .nav__link

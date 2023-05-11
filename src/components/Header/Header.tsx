@@ -1,9 +1,8 @@
 import Image from "next/image";
 import DATA from "data/ong";
-import Navitem from "../Header/Navitem";
+import Navitem from "./Navitem";
 import Link from "next/link";
 import { useState } from "react";
-import logo from "../../assets/ong-logo.png";
 /**
  * @todo style component Image
  * @see https://dev.to/david4473/working-with-images-in-next-js-48d6
@@ -37,7 +36,7 @@ const Header = () => {
         <div className="logo">
           <Link href = {"/"} legacyBehavior>
             <a onClick = { () => setActiveIdx(0) }>
-              <Image src = { logo } alt="logo" />
+              <Image src = { DATA.logo } alt="logo" />
             </a>
           </Link>
         </div>
@@ -76,34 +75,7 @@ const Header = () => {
           
         </nav>
       </div>
-      {/* <nav className="nav">
-        <Link href={"/"} legacyBehavior>
-          <a onClick={ () => setActiveIdx(0)}>
-            <Image src={ logo } alt="logo"  width={40} height={40}/>
-          </a>
-        </Link>
-
-        <div className="nav__menu-bar" onClick={ () => setNavActive(!navActive) }>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-
-        <div className={ `${navActive ? "active" : ""} nav__menu-list` }>
-          {
-            Menu_List.map((menu, idx) =>{
-              return(
-                <div key={menu.texto} onClick={ () => {
-                  setActiveIdx(idx);
-                  setNavActive(false);
-                }}>
-                  <Navitem active={ activeIdx === idx} {...menu} />
-                </div>
-              )
-            })
-          }
-        </div>
-      </nav> */}
+      
     </header>
   );
 };
