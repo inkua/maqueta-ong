@@ -23,6 +23,11 @@ header
     height: 60px;
 }
 
+nav .logo-2
+{
+    display: none;
+}
+
 .container .logo img
 {
     width: 100%;
@@ -243,8 +248,20 @@ input[type=checkbox]#switcher:checked+.check::before
     /* *************************** Menu ********************************************************** */
     .container .logo
     {
+        display: none;
+    }
+
+    nav .logo-2
+    {
+        display: block;
         width: 50px;
         height: 50px;
+    }
+
+    nav .logo-2 a img
+    {
+        width: 100%;
+        height: 100%;
     }
 
     .nav__menu-bar
@@ -269,15 +286,38 @@ input[type=checkbox]#switcher:checked+.check::before
     .nav__menu-list
     {
         flex-direction: column;
+        align-items: start;
         position: fixed;
         top: 75px;
         width: 288px;
         row-gap: 24px;
-        padding: 24px 16px;
+        padding: 24px 24px;
         left: -288px;
         min-height: calc(100% - 60px);
         background: #eee;
         transition: all .3s;
+    }
+
+    .nav__menu-list div
+    {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .nav__menu-list div a
+    {
+        margin: 0 15px;
+    }
+
+    .nav__menu-list div:hover
+    {
+        background: rgba(0, 0, 0, .6);
+        font-weight: bold;
+        color: #000;
     }
 
     .nav__menu-list.active
@@ -290,12 +330,6 @@ input[type=checkbox]#switcher:checked+.check::before
         font-size: 18px;
         position: relative;
         transition: all .3s;
-    }
-
-    .nav__link:hover
-    {
-        font-weight: bold;
-        color: #000;
     }
 
     .nav__link:hover::before
