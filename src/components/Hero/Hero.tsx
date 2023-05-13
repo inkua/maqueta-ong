@@ -1,7 +1,9 @@
 import Image, { StaticImageData } from 'next/image';
-import { LegacyRef, useEffect, useRef, useState } from 'react';
 import styles from './hero.module.css';
 
+/* Props that the hero needs. If the "urlVideo" property is detected,
+putting the video is prioritized, but the "urlImage" property is still
+mandatory in case an empty video url is sent and an image is displayed. */
 type PropsHero = {
   data: {
     title: string;
@@ -14,8 +16,6 @@ type PropsHero = {
 }
 
 const Hero = ({ data }: PropsHero) => {
-  const [videoPlaying, setVideoPlaying] = useState<boolean>(false);
-
   const {
     title,
     description,
