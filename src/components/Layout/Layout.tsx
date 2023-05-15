@@ -1,9 +1,10 @@
 import Footer from "@Component/Footer"
+import Header from "@Component/Header"
 
 const Layout: React.FC<ChildrenProps> = ({ children }) => {
   return (
     <>
-      <nav>Este es el navbar</nav>
+      <Header/>
       <main>{children}</main>
       <Footer />
     </>
