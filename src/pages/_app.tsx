@@ -1,7 +1,8 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import "bootstrap/dist/css/bootstrap.css";
-import 'styles/globals.css'
+import 'styles/globals.css';
+import 'styles/header.css';
 
 import Layout from '@Component/Layout';
 import Header from '@Component/Header';
@@ -13,7 +14,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <Head>
       <title>Maqueta ONG</title>
     </Head>
-      <Header></Header>
       <Component {...pageProps} />
     <style jsx global>{`
       :root {
