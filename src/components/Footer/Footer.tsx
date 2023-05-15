@@ -28,8 +28,8 @@ const Footer = () => {
       <div className={styles.footer__buttons}>
         <Image src={DATA.logo} width={86} height={84} alt='Logo' className={`${styles['footer__logo-desktop']} bg-black-primary`} />
         <div className={styles.divider__buttons}>
-          <button className={`${styles.footer__button} ${styles.button__help}`}>Get Help</button>
-          <button className={`${styles.footer__button} ${styles.button__donate}`}>Donate</button>
+          <button className={`${styles.footer__button} ${styles.button__help} button-transition`}>Get Help</button>
+          <button className={`${styles.footer__button} ${styles.button__donate} button-transition`}>Donate</button>
         </div>
       </div>
     </footer>
