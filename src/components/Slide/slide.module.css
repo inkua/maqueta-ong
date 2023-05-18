@@ -1,0 +1,19 @@
+.slide__title {
+  margin-left: 15px;
+}
+
+.slide {
+  display: flex;
+  height: 230px;
+  gap: 16px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  padding: 15px;
+}
+
+@media (min-width: 940px) {
+  .slide {
+    height: var(--slide-height);
+  }
+}
