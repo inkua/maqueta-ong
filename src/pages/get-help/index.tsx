@@ -15,7 +15,7 @@ const GetHelp = () => {
   ]
 
   return (
-    <div className="container my-5">
+    <div className="my-5">
       <Accordion data={data[0]} />
       <Accordion data={data[1]} />
     </div>
