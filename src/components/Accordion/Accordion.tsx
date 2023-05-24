@@ -7,14 +7,15 @@ type PropsAccordion = {
     description: string;
     isOpen?: boolean;
   }
+  key: number | string;
 }
 
-const Accordion = ({ data: { title, description, isOpen = false } }: PropsAccordion) => {
+const Accordion = ({ data: { title, description, isOpen = false }, key }: PropsAccordion) => {
   const [open, setOpen] = useState(isOpen);
   const descriptionRef = useRef(null);
 
   return (
-    <div className={styles.accordion}>
+    <div className={styles.accordion} key={key}>
       <h3 className={`${styles.accordion__title} ${open && styles['accordion__title-active']}`} onClick={() => setOpen(!open)}>{title}</h3>
       <p
         className={`${styles.accordion__description} ${open && styles['accordion__description-active']}`}
