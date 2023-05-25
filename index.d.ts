@@ -7,6 +7,7 @@ type ChildrenProps = {
 // in the different views
 type CardProps = {
   image: string;
+  widthImage?: number;
   title?: string;
   description?: string;
   buttonArrow?: boolean; //What this property does is validate if there is a button on the image, which is an arrow.

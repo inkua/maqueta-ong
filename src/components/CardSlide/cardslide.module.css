@@ -107,12 +107,8 @@
 }
 
 @media (min-width: 940px) {
-  .card {
-    height: 100%;
-  }
-
   .card__image {
-    width: 326px;
+    width: var(--image-width);
     height: 100%;
   }
 

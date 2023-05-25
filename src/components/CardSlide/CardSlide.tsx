@@ -9,6 +9,7 @@ type DataCard = {
 const CardSlide: React.FC<DataCard> = ({ data }) => {
   const {
     image,
+    widthImage = 327,
     title,
     description,
     buttonArrow = false,
@@ -18,8 +19,8 @@ const CardSlide: React.FC<DataCard> = ({ data }) => {
   return (
     <div className={styles.card}>
       <Image
-        width={327}
-        height={300}
+        width={widthImage}
+        height={327}
         className={`${styles.card__image} ${description && styles['card__image--with-description']}`}
         src={image}
         alt={`Card ${title || description}`}
@@ -40,6 +41,13 @@ const CardSlide: React.FC<DataCard> = ({ data }) => {
           {buttonMore && !buttonArrow &&
             <button type='button' title='More' className={`${styles['card__button--more']} button-transition`} />}
         </div>}
+
+      <style jsx global>{`
+        :root {
+          --image-width: ${widthImage}px;
+        }
+      `}
+      </style>
     </div>
   );
 };
