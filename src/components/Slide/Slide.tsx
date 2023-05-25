@@ -7,7 +7,7 @@ type SlideProps = {
   height?: string; // optional slide height
 }
 
-const Slide = ({data, title, height = '200px'}: SlideProps) => {
+const Slide = ({data, title, height = '300px'}: SlideProps) => {
   return (
     <>
       <h2 className={styles.slide__title}>{title}</h2>

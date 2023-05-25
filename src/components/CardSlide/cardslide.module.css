@@ -48,10 +48,18 @@
 }
 
 .card__button--arrow {
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  align-self: center;
   border: none;
-  border-radius: 14px;
+  border-radius: 50%;
   font-size: 18px;
   background: #f3f3f3;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .card__description {
@@ -75,12 +83,21 @@
 
 .card__button--more {
   position: absolute;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   bottom: calc(50% - 12px);
-  right: 8px;
+  right: 7px;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
-  padding: 2px 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 .card__button--more::before {
@@ -91,12 +108,11 @@
 
 @media (min-width: 940px) {
   .card {
-    width: 300px;
     height: 100%;
   }
 
   .card__image {
-    width: 300px;
+    width: 326px;
     height: 100%;
   }
 
@@ -127,11 +143,12 @@
   }
 
   .card__button--more {
-    padding: 4px 12px;
+    width: 62px;
+    height: 28px;
     border: 1px solid #6c6d70;
     bottom: auto;
-    top: -56px;
-    right: 3%;
+    top: -50px;
+    right: 10px;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;

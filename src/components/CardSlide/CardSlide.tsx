@@ -18,7 +18,7 @@ const CardSlide: React.FC<DataCard> = ({ data }) => {
   return (
     <div className={styles.card}>
       <Image
-        width={300}
+        width={327}
         height={300}
         className={`${styles.card__image} ${description && styles['card__image--with-description']}`}
         src={image}
@@ -38,7 +38,7 @@ const CardSlide: React.FC<DataCard> = ({ data }) => {
           {/*so that the two buttons do not appear at the same time, I make a validation
             that shows me a button only in case the other is with the value of false*/}
           {buttonMore && !buttonArrow &&
-            <button type='button' className={`${styles['card__button--more']} button-transition`} />}
+            <button type='button' title='More' className={`${styles['card__button--more']} button-transition`} />}
         </div>}
     </div>
   );
