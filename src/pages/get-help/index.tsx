@@ -7,8 +7,8 @@ const GetHelp = () => {
 
   return (
     <div className="container my-5">
-      {data.map((item, index) => (
-        <Accordion key={index} data={item} />
+      {data.map((item) => (
+        <Accordion key={item.title} data={item} />
       ))}
     </div>
   )
