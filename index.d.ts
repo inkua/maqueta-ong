@@ -6,6 +6,7 @@ type ChildrenProps = {
 // the image property is mandatory, but the rest are not, to be able to do the validations
 // in the different views
 type CardProps = {
+  id: string | number;
   image: string;
   widthImage?: number;
   title?: string;

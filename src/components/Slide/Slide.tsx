@@ -12,12 +12,9 @@ const Slide = ({data, title, height = '300px'}: SlideProps) => {
     <>
       <h2 className={styles.slide__title}>{title}</h2>
       <div className={styles.slide} >
-        <CardSlide data={data[0]} />
-        <CardSlide data={data[1]} />
-        <CardSlide data={data[2]} />
-        <CardSlide data={data[0]} />
-        <CardSlide data={data[1]} />
-        <CardSlide data={data[2]} />
+        {data.map(data => (
+          <CardSlide data={data} key={data.id} />
+        ))}
       <style jsx global>{`
         :root {
           --slide-height: ${height};

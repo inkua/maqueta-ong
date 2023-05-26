@@ -15,18 +15,24 @@ const HomePage = () => {
 
   const dataSlide = [
     {
+      id: 1,
       image: '',
-      title: 'Titulo',
+      title: 'Titulo 1',
+      widthImage: 327,
     },
     {
+      id: 2,
       image: '',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       buttonMore: true,
+      widthImage: 327,
     },
     {
+      id: 3,
       image: '',
-      title: 'Titulo',
+      title: 'Titulo 2',
       buttonArrow: true,
+      widthImage: 327,
     },
   ];
 
