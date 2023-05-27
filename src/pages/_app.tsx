@@ -5,7 +5,6 @@ import 'styles/globals.css';
 import 'styles/header.css';
 
 import Layout from '@Component/Layout';
-import Header from '@Component/Header';
 import DATA from 'data/ong';
 
 export default function MyApp({ Component, pageProps }: AppProps) {

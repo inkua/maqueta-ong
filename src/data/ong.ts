@@ -1,5 +1,6 @@
-import ong_logo from "assets/ong-logo.png"
 import card from './cards.json';
+import ong_logo from "assets/ong-logo.png";
+import img_index from 'assets/img-index.png';
 
 const DATA = {
   name: "ONG'S NAME",
@@ -28,10 +29,53 @@ const DATA = {
       fontColorSecondary: '#FFFFFF',
     }
   },
+  pages: {
+    indexPage: {
+      dataHero: {
+        title: "ONG'S NAME",
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
+        buttonContent: 'Donate now',
+        fillButton: true,
+        urlImage: img_index,
+      },
+      dataSlide: [
+        {
+          id: 1,
+          image: '',
+          title: 'Titulo 1',
+          widthImage: 327,
+        },
+        {
+          id: 2,
+          image: '',
+          title: 'Titulo 2',
+          widthImage: 327,
+        },
+        {
+          id: 3,
+          image: '',
+          title: 'Titulo 3',
+          widthImage: 327,
+        },
+      ]
+    },
+  },
+  getHelp: {
+    accordions: [
+      {
+        title: 'ONG #1', //title that the accordion will receive
+        description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“', //description that the accordion will receive
+        isOpen: true, //an optional parameter that sets the accordion open or close, depends on value
+      },
+      {
+        title: 'ONG #2',
+        description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“'
+      }
+    ]
+  },
   about_us: card["about-us"],
   requeriments: card.volunteer.requirements,
   experiences: card.volunteer.experiences
-  
 }
 
 export default DATA;
