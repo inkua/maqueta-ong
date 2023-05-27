@@ -1,3 +1,4 @@
+import card from './cards.json';
 import ong_logo from "assets/ong-logo.png";
 import img_index from 'assets/img-index.png';
 
@@ -71,7 +72,10 @@ const DATA = {
         description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“'
       }
     ]
-  }
+  },
+  about_us: card["about-us"],
+  requeriments: card.volunteer.requirements,
+  experiences: card.volunteer.experiences
 }
 
 export default DATA;
