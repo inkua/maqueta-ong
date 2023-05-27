@@ -1,4 +1,5 @@
-import ong_logo from "assets/ong-logo.png"
+import ong_logo from "assets/ong-logo.png";
+import img_index from 'assets/img-index.png';
 
 const DATA = {
   name: "ONG'S NAME",
@@ -25,6 +26,37 @@ const DATA = {
       buttonLang: '#474849', //color for button to change languaje
       fontColorPrimary: '#000000',
       fontColorSecondary: '#FFFFFF',
+    }
+  },
+  pages: {
+    indexPage: {
+      dataHero: {
+        title: "ONG'S NAME",
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
+        buttonContent: 'Donate now',
+        fillButton: true,
+        urlImage: img_index,
+      },
+      dataSlide: [
+        {
+          id: 1,
+          image: '',
+          title: 'Titulo 1',
+          widthImage: 327,
+        },
+        {
+          id: 2,
+          image: '',
+          title: 'Titulo 2',
+          widthImage: 327,
+        },
+        {
+          id: 3,
+          image: '',
+          title: 'Titulo 3',
+          widthImage: 327,
+        },
+      ]
     }
   }
 }
