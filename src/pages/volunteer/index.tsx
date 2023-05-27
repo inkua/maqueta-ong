@@ -1,30 +1,8 @@
 import Card from '@Component/Card/Card';
+import DATA from 'data/ong';
 
-const Contenido_Cards = [
-  {
-    titulo: "Our Objectives",
-    texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quo delectus distinctio eligendi doloremque consequuntur deleniti recusandae ipsa animi? Temporibus impedit vitae eaque quam aspernatur aut quas. Accusamus, nostrum facilis."
-  },
-  {
-    titulo: "Requirements",
-    texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quo delectus distinctio eligendi doloremque consequuntur deleniti recusandae ipsa animi? Temporibus impedit vitae eaque quam aspernatur aut quas. Accusamus, nostrum facilis."
-  }
-]
-
-const volunteerExperiences = [
-  {
-    name: "Name",
-    experience: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa enim fugiat nobis quod blanditiis aliquid consequuntur ad, non voluptatum, delectus quasi eaque quidem eum perspiciatis quae laboriosam praesentium cumque dolore."
-  },
-  {
-    name: "Name",
-    experience: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa enim fugiat nobis quod blanditiis aliquid consequuntur ad, non voluptatum, delectus quasi eaque quidem eum perspiciatis quae laboriosam praesentium cumque dolore."
-  },
-  {
-    name: "Name",
-    experience: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa enim fugiat nobis quod blanditiis aliquid consequuntur ad, non voluptatum, delectus quasi eaque quidem eum perspiciatis quae laboriosam praesentium cumque dolore."
-  }
-]
+const Contenido_Cards = DATA.requeriments; //objetivos y requerimientos
+const volunteerExperiences = DATA.experiences; // experiencias
 
 const Volunteer = () => {
   return (
@@ -34,7 +12,7 @@ const Volunteer = () => {
       {
         Contenido_Cards.map((contenido) => {
           return(
-            <Card {...contenido} />
+            <Card key={contenido.id} {...contenido} />
           )
         })
       }
@@ -45,7 +23,7 @@ const Volunteer = () => {
       {
         volunteerExperiences.map((experiencias) => {
           return(
-            <Card titulo={experiencias.name} texto={experiencias.experience} />
+            <Card key={experiencias.id} titulo={experiencias.name} texto={experiencias.experience} />
           )
         })
       }

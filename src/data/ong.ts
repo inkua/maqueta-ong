@@ -1,4 +1,5 @@
 import ong_logo from "assets/ong-logo.png"
+import card from './cards.json';
 
 const DATA = {
   name: "ONG'S NAME",
@@ -26,7 +27,11 @@ const DATA = {
       fontColorPrimary: '#000000',
       fontColorSecondary: '#FFFFFF',
     }
-  }
+  },
+  about_us: card["about-us"],
+  requeriments: card.volunteer.requirements,
+  experiences: card.volunteer.experiences
+  
 }
 
 export default DATA;
