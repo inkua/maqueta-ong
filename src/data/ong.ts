@@ -57,7 +57,20 @@ const DATA = {
           widthImage: 327,
         },
       ]
-    }
+    },
+  },
+  getHelp: {
+    accordions: [
+      {
+        title: 'ONG #1', //title that the accordion will receive
+        description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“', //description that the accordion will receive
+        isOpen: true, //an optional parameter that sets the accordion open or close, depends on value
+      },
+      {
+        title: 'ONG #2',
+        description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“'
+      }
+    ]
   }
 }
 
