@@ -57,6 +57,7 @@ nav .logo-2
     width: fit-content;
     column-gap: 24px;
     align-items: center;
+    z-index: 10;
 }
 
 .nav__link
