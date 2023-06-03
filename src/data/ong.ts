@@ -68,6 +68,21 @@ const DATA = {
         fillButton: true,
         urlImage: img_donate,
       },
+      accordions:[
+        {
+          title: "Tip 1",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim",
+          
+        },
+        {
+          title: "Tip 2",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim",
+        },
+        {
+          title: "Tip 3",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim",
+        }
+      ]
     }
   },
   getHelp: {
