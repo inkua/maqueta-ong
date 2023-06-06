@@ -1,7 +1,12 @@
-const VolunteerForm = () => {
+import VolunteerForm from "@Component/VolunteerForm";
+import DATA from "data/ong";
+
+const VolunteerFormPage = () => {
   return (
-    <div>VolunteerForm</div>
+    <>
+      <VolunteerForm imageForm={DATA.pages.volunteerForm.imageForm} />
+    </>
   )
 }
 
-export default VolunteerForm
+export default VolunteerFormPage;

@@ -1,0 +1,191 @@
+.section__form {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto 100px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form {
+  display: grid;
+  justify-items: start;
+  gap: 20px;
+  padding: 16px;
+  margin: 0 auto;
+  max-width: 500px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.field:has(input) {
+  position: relative;
+}
+
+.field:has(textarea, select) {
+  width: 100%;
+}
+
+.field:has(select) {
+  display: flex;
+  gap: 20px;
+}
+
+.field__input {
+  padding: 5px;
+  background-color: var(--color-input);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.field__input[name="name"],
+.field__input[name="email"],
+.field__input[name="phoneNumber"] {
+  width: 258px;
+  padding-right: 30px;
+}
+
+.field__input[name="birthdate"] {
+  width: 195px;
+}
+
+.field__input[name="birthdate"]::before {
+  content: "Birthdate |";
+  margin-right: 5px;
+  color: gray;
+}
+
+.field__icon {
+  position: absolute;
+  right: 5px;
+  bottom: 11px;
+}
+
+.field__select {
+  width: 100%;
+  padding: 5px;
+  background-color: var(--color-input);
+  border-radius: 4px;
+}
+
+:is(.field__input[name="birthdate"], .field__select):invalid {
+  color: gray;
+}
+
+:is(.field__input, .field__select) {
+  height: 38px;
+  border: none;
+  border-bottom: 1px solid #2a2a2b;
+}
+
+.field__label {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.field__textarea {
+  width: 100%;
+  padding: 5px;
+  background-color: var(--color-input);
+  border: none;
+  border-radius: 4px;
+  border-bottom: 1px solid #2a2a2b;
+  min-height: 100px;
+}
+
+:is(.field__input, .field__select, .field__textarea):valid {
+  border-bottom: 1px solid #2ecc71;
+}
+
+.button {
+  background-color: var(--color-button);
+  justify-self: center;
+  color: var(--color-font-secondary);
+  padding: 10px 20px;
+  border: none;
+  width: 100%;
+  max-width: 230px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.button::after {
+  content: "\1F86A";
+  margin-left: 8px;
+}
+
+.image__form {
+  display: none;
+}
+
+@media (width >= 640px) {
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .form {
+    max-width: 560px;
+    padding: 40px 30px;
+    gap: 30px;
+    background-color: var(--color-form);
+    filter: drop-shadow(8px 10px 10px rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow(8px 10px 10px rgba(0, 0, 0, 0.25));
+  }
+}
+
+@media (width >= 940px) {
+  .section__form {
+    min-height: 880px;
+    padding-left: 30px;
+  }
+
+  .title {
+    text-align: left;
+    margin-bottom: 25px;
+  }
+
+  .form {
+    max-width: 600px;
+    padding: 50px 40px;
+    margin: 0;
+  }
+
+  .field__input[name="name"],
+  .field__input[name="email"],
+  .field__input[name="phoneNumber"] {
+    width: 350px;
+  }
+
+  .field__input[name="birthdate"] {
+    width: 260px;
+  }
+
+  .field__textarea {
+    min-height: 150px;
+  }
+
+  .image__form {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    object-fit: cover;
+    z-index: -1;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+  }
+}

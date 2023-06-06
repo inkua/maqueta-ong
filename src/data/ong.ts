@@ -1,6 +1,7 @@
 import card from './cards.json';
 import ong_logo from "assets/ong-logo.png";
 import img_index from 'assets/img-index.png';
+import img_volunteer_form from 'assets/img-volunteerForm-2.png';
 
 const DATA = {
   name: "ONG'S NAME",
@@ -21,10 +22,14 @@ const DATA = {
   logo: ong_logo,
   styles: {
     colors: {
-      primary: '#D9D9D9', //color for navbar, footer, inputs,
+      primary: '#D9D9D9', //color for navbar and footer
       card: '#5D5F60', //color for cards and accordion
       button: '#2A2A2A', //color for buttons and borders
       buttonLang: '#474849', //color for button to change languaje
+      form: {
+        container: '#E9E7E7', //color for form container
+        input: '#CBC9C9', //color for inputs
+      },
       fontColorPrimary: '#000000',
       fontColorSecondary: '#FFFFFF',
     }
@@ -59,6 +64,9 @@ const DATA = {
         },
       ]
     },
+    volunteerForm: {
+      imageForm: img_volunteer_form,
+    }
   },
   getHelp: {
     accordions: [
