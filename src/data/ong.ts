@@ -1,6 +1,7 @@
 import card from './cards.json';
 import ong_logo from "assets/ong-logo.png";
 import img_index from 'assets/img-index.png';
+import img_volunteer_hero from 'assets/img-volunteers.png';
 import img_volunteer_form from 'assets/img-volunteerForm-2.png';
 
 const DATA = {
@@ -39,8 +40,9 @@ const DATA = {
       dataHero: {
         title: "ONG'S NAME",
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
-        buttonContent: 'Donate now',
-        fillButton: true,
+        linkContent: 'Donate now',
+        linkAction: '#',
+        fillLinkButton: true,
         urlImage: img_index,
       },
       dataSlide: [
@@ -66,6 +68,13 @@ const DATA = {
     },
     volunteerForm: {
       imageForm: img_volunteer_form,
+      dataHero: {
+        title: "Want to join us",
+        description: 'BECOME A VOLUNTEER Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
+        linkContent: 'Complete the form',
+        linkAction: '#volunteer_form',
+        urlImage: img_volunteer_hero,
+      },
     }
   },
   getHelp: {
