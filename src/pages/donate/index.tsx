@@ -1,6 +1,7 @@
 import Hero from "@Component/Hero";
 import DATA from "data/ong";
 import Accordion from "@Component/Accordion";
+import style from "./donate.module.css";
 
 const tips = DATA.pages.donatePage.accordions;
 
@@ -15,12 +16,12 @@ const Donate = () => {
 
       <section className="container d-flex flex-column">
 
-        <section className="w-100 d-flex flex-xl-row flex-md-row flex-column flex-sm-column justify-content-between px-5 mt-5">
-          <div className="w-50 px-5">
-            <p className="w-75 fw-bold p-2 border border-dark border-2 rounded text-center fs-4">HOW TO DONATE?</p>
+        <section className={`${style.body_card}`}>
+          <div className={`${style.title_card}`}>
+            <p className={`${style.title}`}>HOW TO DONATE?</p>
           </div>
 
-          <div className="w-50 px-5">
+          <div className={`${style.text_card}`}>
             {
               tips.map((tip) => (
                 <Accordion key={tip.title} data={tip} />
@@ -29,12 +30,12 @@ const Donate = () => {
           </div>
         </section>
 
-        <section className="w-100 d-flex flex-row justify-content-between px-5 my-5 py-5">
-        <div className="w-50 px-5">
-            <p className="w-75 fw-bold p-2 border border-dark border-2 rounded text-center fs-4">DO'S</p>
+        <section className={`${style.body_card} my-5 py-5`}>
+        <div className={`${style.title_card}`}>
+            <p className={`${style.title}`}>DO'S</p>
           </div>
 
-          <div className="w-50 px-5">
+          <div className={`${style.text_card}`}>
             {
               tips.map((tip) => (
                 <Accordion key={tip.title} data={tip} />
@@ -43,12 +44,12 @@ const Donate = () => {
           </div>
         </section>
 
-        <section className="w-100 d-flex flex-row justify-content-between px-5 mb-5 pb-5">
-        <div className="w-50 px-5">
-            <p className="w-75 fw-bold p-2 border border-dark border-2 rounded text-center fs-4">DON'T</p>
+        <section className={`${style.body_card} mb-5 pb-5`}>
+        <div className={`${style.title_card}`}>
+            <p className={`${style.title}`}>DON'T</p>
           </div>
 
-          <div className="w-50 px-5">
+          <div className={`${style.text_card}`}>
             {
               tips.map((tip) => (
                 <Accordion key={tip.title} data={tip} />
