@@ -57,6 +57,7 @@ nav .logo-2
     width: fit-content;
     column-gap: 24px;
     align-items: center;
+    z-index: 10;
 }
 
 .nav__link
@@ -243,7 +244,7 @@ input[type=checkbox]#switcher:checked+.check::before
 }
 
 /* ************************************* medias querys **************************************************** */
-@media screen and (max-width: 958px)
+@media screen and (max-width: 956px)
 {
     /* *************************** Menu ********************************************************** */
     .container .logo
@@ -344,5 +345,45 @@ input[type=checkbox]#switcher:checked+.check::before
         width: 120px;
         height: 40px;
         font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 640px)
+{
+    nav .logo-2
+    {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav__menu-bar
+    {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav__menu-list
+    {
+        top: 60px;
+    }
+
+    .buttons
+    {
+        gap: 5px;
+    }
+
+    .btn_help,
+    .btn_volunteer
+    {
+        width: 100px;
+        height: 30px;
+        font-size: .7rem;
+    }
+
+    .wrap-toggle
+    {
+        /* margin-left: .2em; */
+        display: none;
     }
 }

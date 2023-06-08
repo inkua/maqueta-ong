@@ -46,7 +46,7 @@
 .hero__link-button {
   text-decoration: none;
   text-align: center;
-  z-index: 2;
+  z-index: 1;
   max-width: 200px;
   border: 2px solid var(--color-button);
   font-weight: 500;
