@@ -52,7 +52,7 @@ const VolunteerForm = ({ imageForm } : ImageForm) => {
   const minDate = new Date(currentDate.getFullYear() - 12, currentDate.getMonth(), currentDate.getDate()).toISOString().split('T')[0];
 
   return (
-    <section className={styles.section__form}>
+    <section id='volunteer_form' className={styles.section__form}>
       <h2 className={styles.title}>Complete the form to join</h2>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.field}>
@@ -140,13 +140,15 @@ const VolunteerForm = ({ imageForm } : ImageForm) => {
         </div>
         <button type="submit" className={`${styles.button} button-transition`}>Send request</button>
       </form>
-      <Image
-        className={styles.image__form}
-        src={imageForm}
-        alt='Volunteer Form'
-        width={600}
-        height={650}
-      />
+      <div className={styles.container__image}>
+        <Image
+          className={styles.image__form}
+          src={imageForm}
+          alt='Volunteer Form'
+          width={600}
+          height={650}
+        />
+      </div>
     </section>
   );
 };

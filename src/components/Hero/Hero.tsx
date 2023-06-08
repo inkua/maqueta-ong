@@ -47,8 +47,8 @@ const Hero = ({ data }: PropsHero) => {
         <h2 className={styles.hero__title}>{title}</h2>
         <p className={styles.hero__description}>{description}</p>
         <Link
+          scroll={false}
           href={linkAction}
-          type='button'
           className={`${styles['hero__link-button']} button-transition
                       ${fillLinkButton ? styles['link__button-fill'] : styles['link__button-border']}
                       ${linkContent.length <= 10 && styles['text__uppercase']}`}>

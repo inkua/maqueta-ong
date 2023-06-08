@@ -1,7 +1,8 @@
 .section__form {
   position: relative;
   max-width: 1024px;
-  margin: 0 auto 100px;
+  margin: 0 auto 80px;
+  scroll-behavior: smooth;
 }
 
 .title {
@@ -125,7 +126,7 @@
   margin-left: 8px;
 }
 
-.image__form {
+.container__image {
   display: none;
 }
 
@@ -175,13 +176,23 @@
     min-height: 150px;
   }
 
-  .image__form {
+  .container__image {
     display: block;
     position: absolute;
     bottom: 0;
     right: 0;
-    object-fit: cover;
     z-index: -1;
+    background: rgba(84, 138, 244, 0.1);
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+  }
+
+  .image__form {
+    opacity: 0.6;
+    object-fit: cover;
     border-radius: 16px;
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
