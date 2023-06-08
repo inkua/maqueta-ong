@@ -50,15 +50,15 @@
 .field__input[name="name"],
 .field__input[name="email"],
 .field__input[name="phoneNumber"] {
-  width: 258px;
+  width: 270px;
   padding-right: 30px;
 }
 
 .field__input[name="birthdate"] {
-  width: 195px;
+  width: 224px;
 }
 
-.field__input[name="birthdate"]::before {
+.field__input[name="birthdate"]:invalid::before {
   content: "Birthdate |";
   margin-right: 5px;
   color: gray;
@@ -143,6 +143,16 @@
     filter: drop-shadow(8px 10px 10px rgba(0, 0, 0, 0.25));
     -webkit-filter: drop-shadow(8px 10px 10px rgba(0, 0, 0, 0.25));
   }
+
+  .field__input[name="name"],
+  .field__input[name="email"],
+  .field__input[name="phoneNumber"] {
+    width: 300px;
+  }
+
+  .field__input[name="birthdate"] {
+    width: 240px;
+  }
 }
 
 @media (width >= 940px) {
@@ -169,7 +179,7 @@
   }
 
   .field__input[name="birthdate"] {
-    width: 260px;
+    width: 250px;
   }
 
   .field__textarea {
