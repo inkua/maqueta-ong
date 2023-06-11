@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './cardslide.module.css';
+import PropTypes from "prop-types"
 
 type DataCard = {
   data: CardProps; // type CarProps is in the file "index.d.ts" because it's needed in other file
@@ -51,5 +52,19 @@ const CardSlide: React.FC<DataCard> = ({ data }) => {
     </div>
   );
 };
+
+CardSlide.propTypes = {
+  data: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    image: PropTypes.string.isRequired,
+    widthImage: PropTypes.number,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    buttonArrow: PropTypes.bool,
+    buttonMore: PropTypes.bool,
+  }).isRequired,
+};
+
+
 
 export default CardSlide;
