@@ -1,0 +1,21 @@
+name: Build on PR
+on:
+  pull_request: {}
+  pull_request_review_comment:
+    types: [created, edited]
+
+jobs:
+  run-linter:
+    name: Run builder
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout git repository
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install Node.js dependencies
+        run: npm i
+      - name: Build
+        run: npm run build
