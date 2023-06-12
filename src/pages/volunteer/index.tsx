@@ -12,7 +12,9 @@ const Volunteer = () => {
       {
         Contenido_Cards.map((contenido) => {
           return(
-            <Card key={contenido.id} {...contenido} />
+            <Card key={contenido.id}
+            title = {contenido.titulo}
+            text = {contenido.texto} />
           )
         })
       }
@@ -23,7 +25,9 @@ const Volunteer = () => {
       {
         volunteerExperiences.map((experiencias) => {
           return(
-            <Card key={experiencias.id} titulo={experiencias.name} texto={experiencias.experience} />
+            <Card key={experiencias.id}
+            title={experiencias.name}
+            text={experiencias.experience} />
           )
         })
       }
