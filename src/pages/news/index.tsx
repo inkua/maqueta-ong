@@ -5,7 +5,8 @@ const News = () => {
   const data = {
     title: 'Latest news',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
-    buttonContent: 'play',
+    linkContent: 'Go to video',
+    linkAction: 'https://www.youtube.com/embed/hlL9hcCNS6U',
     urlImage: '',
     urlVideo: 'https://www.youtube.com/embed/hlL9hcCNS6U'
   }
