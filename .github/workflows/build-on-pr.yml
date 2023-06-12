@@ -1,4 +1,4 @@
-name: Build on PR
+name: "Bot: Review based on building"
 on:
   pull_request: {}
   pull_request_review_comment:
@@ -19,3 +19,13 @@ jobs:
         run: npm i
       - name: Build
         run: npm run build
+      - uses: ntsd/auto-request-changes-action@v2
+        if: ${{ github.event.pull_request && failure() }}
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          comment-body: "The build has failed. Need changes before merging."
+      - uses: hmarr/auto-approve-action@v2
+        if: ${{ github.event.pull_request && success() }}
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          comment-body: "The build has succeed."
