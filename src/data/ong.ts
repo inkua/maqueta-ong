@@ -1,6 +1,7 @@
 import card from './cards.json';
 import ong_logo from "assets/ong-logo.png";
 import img_index from 'assets/img-index.png';
+import img_donate from 'assets/img-volunteers.png';
 
 const DATA = {
   name: "ONG'S NAME",
@@ -59,6 +60,30 @@ const DATA = {
         },
       ]
     },
+    donatePage: {
+      donateHero: {
+        title: "LET'S HELP OTHERS",
+        description: "LET'S MAKE A CHANGE TOGETHER \n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.",
+        buttonContent: "DONATE NOW",
+        fillButton: true,
+        urlImage: img_donate,
+      },
+      accordions:[
+        {
+          title: "Tip 1",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim",
+          
+        },
+        {
+          title: "Tip 2",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim",
+        },
+        {
+          title: "Tip 3",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim",
+        }
+      ]
+    }
   },
   getHelp: {
     accordions: [
