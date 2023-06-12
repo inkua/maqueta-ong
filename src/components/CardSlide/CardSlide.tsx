@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import styles from './cardslide.module.css';
 import PropTypes from 'prop-types';
-
-
 type DataCard = {
   data: CardProps; // type CarProps is in the file "index.d.ts" because it's needed in other file
 }
