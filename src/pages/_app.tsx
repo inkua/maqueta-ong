@@ -18,6 +18,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       :root {
         --color-primary: ${DATA.styles.colors.primary};
         --color-card: ${DATA.styles.colors.card};
+        --color-form: ${DATA.styles.colors.form.container};
+        --color-input: ${DATA.styles.colors.form.input};
         --color-button: ${DATA.styles.colors.button};
         --color-button-lang: ${DATA.styles.colors.buttonLang};
         --color-font-primary: ${DATA.styles.colors.fontColorPrimary};

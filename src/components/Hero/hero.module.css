@@ -3,6 +3,7 @@
   height: 280px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 40px;
 }
 
 .hero__video {
@@ -42,7 +43,9 @@
   overflow: hidden;
 }
 
-.hero__button {
+.hero__link-button {
+  text-decoration: none;
+  text-align: center;
   z-index: 1;
   max-width: 200px;
   border: 2px solid var(--color-button);
@@ -55,21 +58,22 @@
   -o-border-radius: 4px;
 }
 
-.button__fill {
+.link__button-fill {
   background-color: var(--color-button);
   color: var(--color-font-secondary);
 }
 
-.button__fill:hover {
+.link__button-fill:hover {
   background-color: #000000;
+  color: var(--color-font-secondary);
 }
 
-.button__border {
+.link__button-border {
   background-color: transparent;
   color: var(--color-font-primary);
 }
 
-.button__border:hover {
+.link__button-border:hover {
   background-color: #898989;
   color: var(--color-font-secondary);
 }
@@ -149,10 +153,13 @@
     font-size: 22px;
   }
 
-  .hero__button {
-    text-transform: uppercase;
+  .hero__link-button {
     padding: 8px 16px;
     font-size: 18px;
+  }
+
+  .text__uppercase {
+    text-transform: uppercase;
   }
 
   .hero__degradient {

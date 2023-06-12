@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
 import styles from './hero.module.css';
+import Link from 'next/link';
 
 /* Props that the hero needs. If the "urlVideo" property is detected,
 putting the video is prioritized, but the "urlImage" property is still
@@ -8,8 +9,9 @@ type PropsHero = {
   data: {
     title: string;
     description: string;
-    buttonContent: string;
-    fillButton?: boolean;
+    linkContent: string; //this prop has the content of the link button
+    linkAction: string //this prop has link button action
+    fillLinkButton?: boolean;
     urlImage: string | StaticImageData;
     urlVideo?: string;
   }
@@ -19,8 +21,9 @@ const Hero = ({ data }: PropsHero) => {
   const {
     title,
     description,
-    buttonContent,
-    fillButton = false,
+    linkContent,
+    linkAction,
+    fillLinkButton = false,
     urlImage,
     urlVideo
   } = data;
@@ -43,12 +46,14 @@ const Hero = ({ data }: PropsHero) => {
       <div className={`${styles.hero__content}`}>
         <h2 className={styles.hero__title}>{title}</h2>
         <p className={styles.hero__description}>{description}</p>
-        <button
-          type='button'
-          className={`${styles.hero__button} button-transition
-                      ${fillButton ? styles.button__fill : styles.button__border}`}>
-            {buttonContent}
-        </button>
+        <Link
+          scroll={false}
+          href={linkAction}
+          className={`${styles['hero__link-button']} button-transition
+                      ${fillLinkButton ? styles['link__button-fill'] : styles['link__button-border']}
+                      ${linkContent.length <= 10 && styles['text__uppercase']}`}>
+            {linkContent}
+        </Link>
       </div>
       <div className={styles.buttons__lang}>
         <button type='button' className={styles['hero__button-en']}>EN</button>
