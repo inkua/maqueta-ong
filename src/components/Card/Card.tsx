@@ -1,6 +1,11 @@
 import PropTypes from "prop-types";
 
-const Card = ({ title, text }) => {
+type CardProps = {
+  title: string;
+  text: string;
+};
+
+const Card = ({ title, text } : CardProps)  => {
   return (
     <div className="card bg-secondary border border-0 text-white">
       <div className="card-body" id='card-body'>
@@ -11,10 +16,9 @@ const Card = ({ title, text }) => {
   );
 };
 
-Card.prototype.propTypes = {
+Card.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
 };
-
 
 export default Card;

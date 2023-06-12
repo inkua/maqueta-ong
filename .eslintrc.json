@@ -22,6 +22,7 @@
     "prefer-const": "error",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "react/no-unknown-property": "off"
+    "react/no-unknown-property": "off",
+    "react/props-types" : "off"
   }
 }
