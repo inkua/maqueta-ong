@@ -3,13 +3,13 @@ import styles from './cardslide.module.css';
 import PropTypes from 'prop-types';
 type DataCard = {
   data: CardProps; // type CarProps is in the file "index.d.ts" because it's needed in other file
+  widthCard: number;
 }
 
 // this card adapts to all that we need in various components
-const CardSlide = ({ data } : DataCard) => {
+const CardSlide = ({ data, widthCard = 327 } : DataCard) => {
   const {
     image,
-    widthImage = 327,
     title,
     description,
     buttonArrow = false,
@@ -19,7 +19,7 @@ const CardSlide = ({ data } : DataCard) => {
   return (
     <div className={styles.card}>
       <Image
-        width={widthImage}
+        width={widthCard}
         height={327}
         className={`${styles.card__image} ${description && styles['card__image--with-description']}`}
         src={image}
@@ -44,7 +44,7 @@ const CardSlide = ({ data } : DataCard) => {
 
       <style jsx global>{`
         :root {
-          --image-width: ${widthImage}px;
+          --image-width: ${widthCard}px;
         }
       `}
       </style>
@@ -55,7 +55,7 @@ const CardSlide = ({ data } : DataCard) => {
 CardSlide.propTypes = {
   data: PropTypes.shape({
     image: PropTypes.string.isRequired,
-    widthImage: PropTypes.number,
+    widthCard: PropTypes.number,
     title: PropTypes.string,
     description: PropTypes.string,
     buttonArrow: PropTypes.bool,

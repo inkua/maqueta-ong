@@ -5,10 +5,11 @@ import styles from './slide.module.css';
 type SlideProps = {
   data: CardProps[]; // data that the card component needs
   title: string; // section title
+  widthCard?: number; //width of cards, all cards keep the same width
   height?: string; // optional slide height
 }
 
-const Slide = ({ data, title, height = '300px' }: SlideProps) => {
+const Slide = ({ data, title, widthCard, height = '300px' }: SlideProps) => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   // Since Next.js works with the server, the "window" is not defined when the page is rendered.
@@ -34,7 +35,7 @@ const Slide = ({ data, title, height = '300px' }: SlideProps) => {
       <h2 className={styles.slide__title}>{title}</h2>
       <div className={`${styles.slide} ${isDesktop && data.length <= 3 && styles['content-center']}`} >
         {data.map(data => (
-          <CardSlide data={data} key={data.id} />
+          <CardSlide data={data} widthCard={widthCard} key={data.id} />
         ))}
         <style jsx global>{`
         :root {

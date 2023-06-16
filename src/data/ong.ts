@@ -45,26 +45,28 @@ const DATA = {
         fillLinkButton: true,
         urlImage: img_index,
       },
-      dataSlide: [
-        {
-          id: 1,
-          image: '',
-          title: 'Titulo 1',
-          widthImage: 327,
-        },
-        {
-          id: 2,
-          image: '',
-          title: 'Titulo 2',
-          widthImage: 327,
-        },
-        {
-          id: 3,
-          image: '',
-          title: 'Titulo 3',
-          widthImage: 327,
-        },
-      ]
+      dataSlide: {
+        title: 'Our partners',
+        heightSlide: '350px',
+        widthCards: 327,
+        dataCards: [
+          {
+            id: 1,
+            image: '',
+            title: 'Titulo 1',
+          },
+          {
+            id: 2,
+            image: '',
+            title: 'Titulo 2',
+          },
+          {
+            id: 3,
+            image: '',
+            title: 'Titulo 3',
+          },
+        ]
+      }
     },
     volunteerForm: {
       imageForm: img_volunteer_form,

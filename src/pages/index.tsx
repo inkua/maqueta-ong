@@ -3,11 +3,23 @@ import Slide from "@Component/Slide";
 import DATA from "data/ong";
 
 const HomePage = () => {
+  const {
+    dataCards,
+    heightSlide,
+    title,
+    widthCards
+  } = DATA.pages.indexPage.dataSlide;
+
   return (
     <div>
       <Hero data={DATA.pages.indexPage.dataHero} />
       <section>
-        <Slide data={DATA.pages.indexPage.dataSlide} height={'300px'} title="Our partners" />
+        <Slide
+          data={dataCards}
+          title={title}
+          widthCard={widthCards}
+          height={heightSlide}
+        />
       </section>
     </div>
   );
