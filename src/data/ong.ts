@@ -45,25 +45,113 @@ const DATA = {
         fillLinkButton: true,
         urlImage: img_index,
       },
-      dataSlide: [
+      dataSlide: {
+        title: 'Our partners',
+        heightSlide: '300px',
+        widthCards: 327,
+        dataCards: [
+          {
+            id: 1,
+            image: '',
+            title: 'Titulo 1',
+          },
+          {
+            id: 2,
+            image: '',
+            title: 'Titulo 2',
+          },
+          {
+            id: 3,
+            image: '',
+            title: 'Titulo 3',
+          },
+        ]
+      }
+    },
+    news: {
+      dataHero: {
+        title: 'Latest news',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
+        linkContent: 'Go to video',
+        linkAction: 'https://www.youtube.com/embed/hlL9hcCNS6U',
+        urlImage: '',
+        urlVideo: 'https://www.youtube.com/embed/hlL9hcCNS6U'
+      },
+      dataSlides: [
         {
-          id: 1,
-          image: '',
-          title: 'Titulo 1',
-          widthImage: 327,
+          title: 'Ukraine now',
+          heightSlide: '330px',
+          widthCards: 327,
+          dataCards: [
+            {
+              id: 1,
+              image: '',
+              title: 'Titulo 1',
+              buttonArrow: true
+            },
+            {
+              id: 2,
+              image: '',
+              title: 'Titulo 2',
+              buttonArrow: true
+            },
+            {
+              id: 3,
+              image: '',
+              title: 'Titulo 3',
+              buttonArrow: true
+            },
+            {
+              id: 4,
+              image: '',
+              title: 'Titulo 4',
+              buttonArrow: true
+            },
+            {
+              id: 5,
+              image: '',
+              title: 'Titulo 5',
+              buttonArrow: true
+            },
+          ]
         },
         {
-          id: 2,
-          image: '',
-          title: 'Titulo 2',
-          widthImage: 327,
-        },
-        {
-          id: 3,
-          image: '',
-          title: 'Titulo 3',
-          widthImage: 327,
-        },
+          title: 'Stories and testimonies',
+          heightSlide: '350px',
+          widthCards: 300,
+          dataCards: [
+            {
+              id: 1,
+              image: '',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              buttonMore: true
+            },
+            {
+              id: 2,
+              image: '',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              buttonMore: true
+            },
+            {
+              id: 3,
+              image: '',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              buttonMore: true
+            },
+            {
+              id: 4,
+              image: '',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              buttonMore: true
+            },
+            {
+              id: 5,
+              image: '',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              buttonMore: true
+            },
+          ]
+        }
       ]
     },
     volunteerForm: {

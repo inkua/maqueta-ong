@@ -1,6 +1,6 @@
 .scrollToTopButton {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   right: 20px;
   z-index: 1000;
   background-color: var(--color-primary);
@@ -20,4 +20,10 @@
 
 .scrollToTopButton.visible {
   opacity: 1;
+}
+
+@media (width >= 940px) {
+  .scrollToTopButton {
+    bottom: 20px;
+  }
 }
