@@ -45,11 +45,27 @@ Variable name:
 }
 
 .button-transition:hover {
-  transform: translateY(-3px);
-  -webkit-transform: translateY(-3px);
-  -moz-transform: translateY(-3px);
-  -ms-transform: translateY(-3px);
-  -o-transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.01);
+  -webkit-transform: translateY(-3px) scale(1.01);
+  -moz-transform: translateY(-3px) scale(1.01);
+  -ms-transform: translateY(-3px) scale(1.01);
+  -o-transform: translateY(-3px) scale(1.01);
+}
+
+.sections-slides {
+  margin: 15px 0 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 5px;
+}
+
+@media (width >=940px) {
+  .sections-slides {
+    margin: 25px 0 60px 45px;
+    gap: 40px;
+    padding: 0;
+  }
 }
 
 #__next {
