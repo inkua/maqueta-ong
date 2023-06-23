@@ -28,6 +28,8 @@ const Hero = ({ data }: PropsHero) => {
     urlVideo
   } = data;
 
+  const formattedDescription = description?.replace(/\n/g, '<br />');
+
   return (
     urlVideo ?
       <iframe
@@ -45,7 +47,7 @@ const Hero = ({ data }: PropsHero) => {
       <Image src={urlImage} alt={title} className={styles.hero__img} priority />
       <div className={`${styles.hero__content}`}>
         <h2 className={styles.hero__title}>{title}</h2>
-        <p className={styles.hero__description}>{description}</p>
+        <p className={styles.hero__description} dangerouslySetInnerHTML={{__html: formattedDescription}}></p>
         <Link
           scroll={false}
           href={linkAction}
