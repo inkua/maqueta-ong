@@ -1,12 +1,10 @@
 .accordion {
   width: 100%;
-  position: relative;
-  max-width: 940px;
   margin: 0 auto;
 }
 
 .accordion__title,
-.accordion__description {
+.content__description {
   background-color: var(--color-card);
   color: var(--color-font-secondary);
   position: relative;
@@ -14,6 +12,7 @@
 
 .accordion__title {
   cursor: pointer;
+  margin-bottom: 0;
   padding: 8px 16px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -35,46 +34,27 @@
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
-
 .accordion__title-active::before {
   content: "\2B9D";
 }
 
-.accordion__description {
-  border-radius: 8px;
-  opacity: 0;
-  height: 0;
-  text-align: justify;
+.content__description {
   overflow: hidden;
-  text-overflow: ellipsis;
-  transition-property: height opacity;
-  transition: 0.5s ease-in-out;
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -ms-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
+  text-align: justify;
+  margin-top: 0.5rem;
+  transition: max-height 0.4s ease-in-out, opacity 0.5s ease-in-out;
+  -webkit-transition: max-height 0.4s ease-in-out, opacity 0.5s ease-in-out;
+  -moz-transition: max-height 0.4s ease-in-out, opacity 0.5s ease-in-out;
+  -ms-transition: max-height 0.4s ease-in-out, opacity 0.5s ease-in-out;
+  -o-transition: max-height 0.4s ease-in-out, opacity 0.5s ease-in-out;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
-.accordion__description-active {
-  opacity: 1;
+.description {
+  margin: 0;
   padding: 8px 16px;
-  height: 136px;
-}
-
-@media (min-width: 375px) {
-  .accordion__description-active {
-    height: 112px;
-  }
-}
-
-@media (min-width: 425px) {
-  .accordion__description-active {
-    height: 88px;
-  }
-}
-
-@media (min-width: 768px) {
-  .accordion__description-active {
-    height: 64px;
-  }
 }
