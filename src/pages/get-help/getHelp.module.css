@@ -1,0 +1,14 @@
+.accordions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 5px;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+@media (width >= 640px) {
+  .accordions {
+    padding: 5px 15px;
+  }
+}

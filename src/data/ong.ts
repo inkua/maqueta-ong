@@ -158,25 +158,53 @@ const DATA = {
       imageForm: img_volunteer_form,
       dataHero: {
         title: "Want to join us",
-        description: 'BECOME A VOLUNTEER Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
+        description: 'BECOME A VOLUNTEER \n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
         linkContent: 'Complete the form',
         linkAction: '#volunteer_form',
         urlImage: img_volunteer_hero,
       },
-    }
-  },
-  getHelp: {
-    accordions: [
-      {
-        title: 'ONG #1', //title that the accordion will receive
-        description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“', //description that the accordion will receive
-        isOpen: true, //an optional parameter that sets the accordion open or close, depends on value
+    },
+    getHelp: {
+      dataHero: {
+        title: "I NEED HELP",
+        description: 'DO YOU NEED SHELTER? CLOTHES? FOOD? \n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
+        linkContent: 'GET HELP',
+        linkAction: '/get-help',
+        urlImage: img_volunteer_hero,
       },
-      {
-        title: 'ONG #2',
-        description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“'
-      }
-    ]
+      accordions: [
+        {
+          title: 'ONG #1', //title that the accordion will receive
+          description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor“', //description that the accordion will receive
+          isOpen: true, //an optional parameter that sets the accordion open or close, depends on value
+        },
+        {
+          title: 'ONG #2',
+          description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor“',
+          isOpen: true,
+        },
+        {
+          title: 'ONG #3',
+          description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor“',
+          isOpen: true,
+        },
+        {
+          title: 'ONG #4',
+          description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor“',
+          isOpen: true,
+        },
+        {
+          title: 'ONG #5',
+          description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor“',
+          isOpen: true,
+        },
+        {
+          title: 'ONG #6',
+          description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor“',
+          isOpen: true,
+        },
+      ]
+    }
   },
   about_us: card["about-us"],
   requeriments: card.volunteer.requirements,
