@@ -19,7 +19,6 @@
 }
 
 .card__image {
-  width: 200px;
   height: 200px;
   background-color: var(--color-primary);
   border-radius: 4px;

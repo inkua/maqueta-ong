@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
 import CardSlide from '@Component/CardSlide';
 import styles from './slide.module.css';
+import useWindowSize from 'hooks/useWindowSize';
 
 type SlideProps = {
   data: CardProps[]; // data that the card component needs
@@ -10,25 +10,9 @@ type SlideProps = {
 }
 
 const Slide = ({ data, title, widthCard, height = '300px' }: SlideProps) => {
-  const [windowWidth, setWindowWidth] = useState(0);
-
-  // Since Next.js works with the server, the "window" is not defined when the page is rendered.
-  // Wait for the page to render and then assign the value of "window" to the state.
-  useEffect(() => {
-    setWindowWidth(window.innerWidth);
-  }, [])
+  const windowWidth = useWindowSize();
 
   const isDesktop = windowWidth > 1037;
-
-  //effect to handle window size
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize); //clean listener
-    }
-  }, []);
 
   return (
     <>

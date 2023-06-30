@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import styles from './cardslide.module.css';
 import PropTypes from 'prop-types';
+import useWindowSize from 'hooks/useWindowSize';
 
 type DataCard = {
   data: CardProps; // type CarProps is in the file "index.d.ts" because it's needed in other file
@@ -10,7 +11,7 @@ type DataCard = {
 
 // this card adapts to all that we need in various components
 const CardSlide = ({ data, widthCard = 327 } : DataCard) => {
-  const [isDesktop, setIsDesktop] = useState(false);
+  const windowWidth = useWindowSize();
   const imageRef = useRef<HTMLImageElement>();
   const {
     image,
@@ -20,26 +21,17 @@ const CardSlide = ({ data, widthCard = 327 } : DataCard) => {
     buttonMore = false
   } = data;
 
+  const isDesktop = windowWidth > 940;
+
   //effect to set the width style to the width of the image depending on the size of the device.
   useEffect(() => {
-    setIsDesktop(window.innerWidth > 940);
     const imageCurrent = imageRef.current;
     if(isDesktop) {
       imageCurrent.style.width = `${widthCard}px`;
-      return
+      return;
     }
     imageCurrent.style.width = '200px';
-  }, [isDesktop, widthCard])
-
-  //effect for window resize
-  useEffect(() => {
-    const handleResize = () => setIsDesktop(window.innerWidth > 940);
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize); //clean listener
-    }
-  }, [])
+  }, [isDesktop, widthCard]);
 
   return (
     <div className={styles.card}>
