@@ -44,7 +44,9 @@
 
 .title__content {
   color: #7d7d7d;
+  font-size: 24px;
   margin: 0;
+  font-weight: 500;
 }
 
 .card__button--arrow {
@@ -64,7 +66,7 @@
 
 .card__description {
   font-size: 12px;
-  background: #919191;
+  background: #b1b1b1;
   position: absolute;
   bottom: 0;
   left: 0;

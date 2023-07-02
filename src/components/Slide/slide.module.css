@@ -16,9 +16,3 @@
   justify-content: center;
   gap: 20px;
 }
-
-@media (min-width: 940px) {
-  .slide {
-    height: var(--slide-height);
-  }
-}
