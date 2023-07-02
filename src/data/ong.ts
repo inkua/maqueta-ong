@@ -45,28 +45,75 @@ const DATA = {
         fillLinkButton: true,
         urlImage: img_index,
       },
-      dataSlide: {
-        title: 'Our partners',
-        heightSlide: '300px',
-        widthCards: 327,
-        dataCards: [
-          {
-            id: 1,
-            image: '',
-            title: 'Titulo 1',
-          },
-          {
-            id: 2,
-            image: '',
-            title: 'Titulo 2',
-          },
-          {
-            id: 3,
-            image: '',
-            title: 'Titulo 3',
-          },
-        ]
-      }
+      aboutUs: {
+        title: 'About us',
+        paragraphOne: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit',
+        paragraphTwo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit',
+      },
+      dataSlides: [
+        {
+          title: 'Our partners',
+          heightSlide: '350px',
+          widthCards: 327,
+          dataCards: [
+            {
+              id: 1,
+              image: '',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              buttonMore: true,
+            },
+            {
+              id: 2,
+              image: '',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              buttonMore: true,
+            },
+            {
+              id: 3,
+              image: '',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              buttonMore: true,
+            },
+            {
+              id: 4,
+              image: '',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              buttonMore: true,
+            },
+          ]
+        },
+        {
+          title: 'Our supporters',
+          heightSlide: '300px',
+          widthCards: 327,
+          dataCards: [
+            {
+              id: 1,
+              image: '',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              buttonMore: true,
+            },
+            {
+              id: 2,
+              image: '',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              buttonMore: true,
+            },
+            {
+              id: 3,
+              image: '',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              buttonMore: true,
+            },
+            {
+              id: 4,
+              image: '',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              buttonMore: true,
+            },
+          ]
+        }
+      ]
     },
     news: {
       dataHero: {
