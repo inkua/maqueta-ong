@@ -1,8 +1,9 @@
-import Hero from "@Component/Hero"
-import Slide from "@Component/Slide"
-import DATA from "data/ong"
-import styles from "./news.module.css"
-import Link from "next/link"
+import Link from "next/link";
+import Hero from "@Component/Hero";
+import Slide from "@Component/Slide";
+import BtnReadMore from "@Component/BtnReadMore";
+import DATA from "data/ong";
+import styles from "./news.module.css";
 
 const News = () => {
   //object of test
@@ -31,12 +32,10 @@ const News = () => {
             </article>
           ))
         }
-        <button type="button" className={`${styles.read__more} button-transition`}>
-          Read more <span className={styles['read__more-arrow']}>&#129131;</span>
-        </button>
+        <BtnReadMore />
       </section>
     </>
   )
 }
 
-export default News
+export default News;
