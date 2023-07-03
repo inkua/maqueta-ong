@@ -44,8 +44,6 @@
 }
 
 .hero__link-button {
-  text-decoration: none;
-  text-align: center;
   z-index: 1;
   max-width: 200px;
   border: 2px solid var(--color-button);
@@ -123,7 +121,7 @@
   .hero__content {
     width: 40%;
     background: rgba(217, 217, 217, 0.63);
-    padding: 30px;
+    padding: 15px;
   }
 
   .hero__title {

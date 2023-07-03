@@ -21,6 +21,7 @@
 }
 
 .socialmedia__link {
+  display: flex;
   text-decoration: none;
   color: var(--color-font-primary);
 }
@@ -131,6 +132,7 @@
 
   .socialmedia__text {
     display: inline-block;
+    align-self: center;
     margin-left: 8px;
     color: var(--color-font-primary);
   }

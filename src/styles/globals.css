@@ -10,8 +10,76 @@ Variable name:
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
+#__next {
+  display: flex;
+  flex-direction: column;
+}
+
 * {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+h3 {
+  font-size: calc(1.25rem + 0.6vw);
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+h5,
+h6 {
+  font-size: 1rem;
+}
+
+button,
+p,
+a {
+  line-height: 1.5;
+}
+
+button,
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+label {
+  display: inline-block;
+}
+
+/* Input, Select, Textarea */
+input,
+select,
+textarea {
+  font-size: 1rem;
 }
 
 .bg-color-primary {
@@ -53,7 +121,7 @@ Variable name:
 }
 
 .sections-slides {
-  margin: 15px 0 45px;
+  margin-bottom: 45px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -66,9 +134,4 @@ Variable name:
     gap: 40px;
     padding: 0;
   }
-}
-
-#__next {
-  display: flex;
-  flex-direction: column;
 }
