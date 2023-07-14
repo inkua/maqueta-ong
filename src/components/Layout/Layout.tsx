@@ -1,5 +1,5 @@
 import Footer from "@Component/Footer"
-import Header from "@Component/Header"
+import Navbar from "@Component/Navbar"
 import ScrollToTopButton from "@Component/ScrollToTopButton";
 import styles from "./Layout.module.css"
 import PropTypes from "prop-types"
@@ -8,7 +8,7 @@ import PropTypes from "prop-types"
 const Layout: React.FC<ChildrenProps> = ({ children }) => {
   return (
     <>
-      <Header/>
+      <Navbar/>
       <main className={styles.layout__main}>
         {children}
         <ScrollToTopButton />

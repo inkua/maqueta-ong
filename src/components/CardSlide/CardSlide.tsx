@@ -42,6 +42,7 @@ const CardSlide = ({ data, widthCard = 327 } : DataCard) => {
         className={`${styles.card__image} ${description && styles['card__image--with-description']}`}
         src={image}
         alt={`Card ${title || description}`}
+        priority
       />
       {title &&
         <div className={`${styles.card__title} ${!buttonArrow && styles['card__title-degradient']}`}>

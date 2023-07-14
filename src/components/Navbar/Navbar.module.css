@@ -1,0 +1,240 @@
+/* Navbar.module.css */
+
+.navbar {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary);
+  padding: 0.8rem;
+}
+
+.menu__toggle_logo {
+  display: flex;
+}
+
+.navbar__logo {
+  width: 70px;
+  height: 48px;
+  object-fit: cover;
+}
+
+.menu__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu__icon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-font-primary);
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+}
+
+.menu__icon:before,
+.menu__icon:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-font-primary);
+  transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+}
+
+.menu__icon:before {
+  top: -6px;
+  left: 0;
+}
+
+.menu__icon:after {
+  top: 6px;
+  left: 0;
+}
+
+.menu__icon.open::after,
+.menu__icon.open::before {
+  top: 0;
+  bottom: 0;
+}
+
+.menu__icon.open {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.menu__icon.open::after {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+.navbar__menu {
+  background-color: #9fa0a0;
+  z-index: 99;
+  width: 70%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  top: 74px;
+  left: -70%;
+  padding: 60px 12px 12px;
+}
+
+.navbar__menu {
+  transition: left 0.5s ease-in-out;
+  -webkit-transition: left 0.5s ease-in-out;
+  -moz-transition: left 0.5s ease-in-out;
+  -ms-transition: left 0.5s ease-in-out;
+  -o-transition: left 0.5s ease-in-out;
+}
+
+.navbar__menu.open {
+  left: 0;
+}
+
+.menu__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 16px;
+  text-align: center;
+  width: 100%;
+  background-color: var(--color-input);
+  color: var(--color-font-primary);
+}
+
+.menu__item {
+  background-color: var(--color-input);
+  padding: 5px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.menu__link {
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  color: var(--color-font-primary);
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.menu__link:hover {
+  font-weight: bold;
+}
+
+.navbar__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.button__primary {
+  border-radius: 4px;
+  border: 3px solid var(--color-button);
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.5rem;
+  text-decoration: none;
+}
+
+.button__secondary {
+  border: 3px solid var(--color-button);
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.5rem;
+  text-decoration: none;
+}
+
+@media (width >= 375px) {
+  .button__primary,
+  .button__secondary {
+    padding: 0.2rem 1rem;
+  }
+
+  .menu__toggle_logo {
+    gap: 10px;
+  }
+}
+
+@media (width >= 640px) {
+  .navbar__links {
+    display: flex;
+    gap: 15px;
+  }
+
+  .menu__toggle {
+    display: none;
+  }
+
+  .navbar__menu {
+    background-color: transparent;
+    flex-direction: row;
+    position: static;
+    height: auto;
+    width: auto;
+    padding: 0;
+    gap: 15px;
+  }
+
+  .menu__title {
+    display: none;
+  }
+
+  .menu__item {
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+  }
+
+  .menu__link {
+    margin: 0;
+    align-self: center;
+  }
+}
+
+@media (width >= 1024px) {
+  .navbar {
+    padding: 0.8rem 4rem;
+  }
+
+  .navbar__logo {
+    width: 100px;
+    height: 50px;
+  }
+
+  .menu__link {
+    font-size: 18px;
+  }
+
+  .button__primary,
+  .button__secondary {
+    padding: 0.3rem;
+    width: 120px;
+  }
+
+  .button__primary {
+    border-width: 2px;
+  }
+}
