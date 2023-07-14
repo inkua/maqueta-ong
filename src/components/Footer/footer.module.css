@@ -77,25 +77,6 @@
   -o-border-radius: 4px;
 }
 
-.button__help {
-  background-color: transparent;
-  color: var(--color-font-primary);
-}
-
-.button__help:hover {
-  background-color: #898989;
-  color: var(--color-font-secondary);
-}
-
-.button__donate {
-  background-color: var(--color-button);
-  color: var(--color-font-secondary);
-}
-
-.button__donate:hover {
-  background-color: #000000;
-}
-
 @media (min-width: 425px) {
   .footer__button {
     width: 40%;
