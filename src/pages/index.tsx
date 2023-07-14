@@ -13,7 +13,7 @@ const HomePage = () => {
     <>
       <Hero data={dataHero} />
       <section className='sections-slides'>
-        <article className={styles.article__about_us}>
+        <article className={`${styles.article__about_us} ${styles["my-6"]}`}>
           <h2 className={styles.title__about_us}>{dataAboutUs.title}</h2>
           <div className={styles.paragraphs__about_us}>
             <p>{dataAboutUs.paragraphOne}</p>
@@ -23,7 +23,7 @@ const HomePage = () => {
         </article>
         {
           dataSlides.map((slide) => (
-            <article key={slide.title}>
+            <article key={slide.title} className={styles["my-6"]} >
               <Slide
                 data={slide.dataCards}
                 height={slide.heightSlide}

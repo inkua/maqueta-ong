@@ -1,3 +1,7 @@
+.my-6 {
+  margin: 60px 0;
+}
+
 .news__collaborate {
   display: flex;
   flex-direction: column;
