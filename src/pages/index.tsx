@@ -1,6 +1,6 @@
-import BtnReadMore from "@Component/BtnReadMore";
 import Hero from "@Component/Hero";
 import Slide from "@Component/Slide";
+import BtnReadMore from "@Component/Button";
 import DATA from "data/ong";
 import styles from './index/index.module.css'
 
@@ -19,7 +19,7 @@ const HomePage = () => {
             <p>{dataAboutUs.paragraphOne}</p>
             <p>{dataAboutUs.paragraphTwo}</p>
           </div>
-          <BtnReadMore showArrow={false} />
+          <BtnReadMore title="Read more" showArrow={false} />
         </article>
         {
           dataSlides.map((slide) => (

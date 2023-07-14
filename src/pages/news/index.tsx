@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Hero from "@Component/Hero";
 import Slide from "@Component/Slide";
-import BtnReadMore from "@Component/BtnReadMore";
+import BtnReadMore from "@Component/Button";
 import DATA from "data/ong";
 import styles from "./news.module.css";
 
@@ -32,7 +32,7 @@ const News = () => {
             </article>
           ))
         }
-        <BtnReadMore />
+        <BtnReadMore title="Read more" />
       </section>
     </>
   )
