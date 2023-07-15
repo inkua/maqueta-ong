@@ -22,7 +22,7 @@ const News = () => {
         </div>
         {
           dataSlides.map((slide) => (
-            <article key={slide.title}>
+            <article key={slide.title} className={styles["my-6"]}>
               <Slide
                 data={slide.dataCards}
                 height={slide.heightSlide}
