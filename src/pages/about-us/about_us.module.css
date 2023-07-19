@@ -1,0 +1,54 @@
+.align__paragraph {
+  text-align: justify;
+}
+
+.section__history {
+  margin-top: 15px;
+}
+
+.diviser {
+  position: relative;
+  height: 200px;
+}
+
+.diviser__degradient-start,
+.diviser__degradient-end {
+  position: absolute;
+  top: 0;
+  width: 35%;
+  height: 100%;
+}
+
+.diviser__degradient-start {
+  background: linear-gradient(-90deg, rgba(28, 28, 29, 0) 0%, #1c1c1d 100%);
+  left: 0;
+}
+
+.diviser__degradient-end {
+  background: linear-gradient(90deg, rgba(28, 28, 29, 0) 0%, #1c1c1d 100%);
+  right: 0;
+}
+
+.diviser__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.diviser__description {
+  text-align: center;
+  font-size: 24px;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 30%;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+@media (width >= 640px) {
+  .diviser__description {
+    padding: 0 25%;
+  }
+}

@@ -1,6 +1,8 @@
 import card from './cards.json';
 import ong_logo from "assets/ong-logo.png";
 import img_index from 'assets/img-index.png';
+import img_about_us_1 from 'assets/img-aboutus-1.png';
+import img_about_us_2 from 'assets/img-aboutus-2.png';
 import img_volunteer_hero from 'assets/img-volunteers.png';
 import img_volunteer_form from 'assets/img-volunteerForm-2.png';
 
@@ -41,7 +43,7 @@ const DATA = {
         title: "ONG'S NAME",
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
         linkContent: 'Donate now',
-        linkAction: '#',
+        linkAction: '/donate',
         fillLinkButton: true,
         urlImage: img_index,
       },
@@ -114,6 +116,61 @@ const DATA = {
           ]
         }
       ]
+    },
+    aboutUs: {
+      dataHero: {
+        title: "ABOUT US",
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
+        linkContent: 'Read More',
+        linkAction: '/about-us',
+        fillLinkButton: true,
+        urlImage: img_about_us_1,
+      },
+      ourHistory: {
+        title: 'Our History',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse. \n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.',
+        cards: [
+          {
+            title: 'Our value',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.'
+          },
+          {
+            title: 'What we support',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.'
+          }
+        ]
+      },
+      diviser: {
+        description: 'Important data or number that calls the attention of the user',
+        image: img_about_us_2
+      },
+      dataSlide: {
+        title: 'Our actions',
+        heightSlide: '350px',
+        widthCards: 327,
+        dataCards: [
+          {
+            id: 1,
+            title: 'Title 1',
+            image: '',
+          },
+          {
+            id: 2,
+            title: 'Title 2',
+            image: '',
+          },
+          {
+            id: 3,
+            title: 'Title 3',
+            image: '',
+          },
+          {
+            id: 4,
+            title: 'Title 4',
+            image: '',
+          },
+        ]
+      }
     },
     news: {
       dataHero: {
