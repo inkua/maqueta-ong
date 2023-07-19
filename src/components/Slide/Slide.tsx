@@ -27,7 +27,7 @@ const Slide = ({ data, title, widthCard, height = '300px' }: SlideProps) => {
   }, [isDesktop, height]);
 
   return (
-    <>
+    <article>
       <h2 className={styles.slide__title}>{title}</h2>
       <div
         ref={sectionRef}
@@ -37,7 +37,7 @@ const Slide = ({ data, title, widthCard, height = '300px' }: SlideProps) => {
           <CardSlide data={data} widthCard={widthCard} key={data.id} />
         ))}
       </div>
-    </>
+    </article>
   );
 };
 
