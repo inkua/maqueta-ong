@@ -13,7 +13,7 @@ const News = () => {
   return (
     <>
       <Hero data={dataHero} />
-      <section className='sections-slides'>
+      <section className='sections-container'>
         <div className={styles.news__collaborate}>
           <h3 className={styles.collaborate__title}>You can collaborate here</h3>
           <Link href='/donate' className={`${styles.collaborate__link} bg-button button-transition`}>
@@ -22,17 +22,16 @@ const News = () => {
         </div>
         {
           dataSlides.map((slide) => (
-            <article key={slide.title}>
-              <Slide
-                data={slide.dataCards}
-                height={slide.heightSlide}
-                title={slide.title}
-                widthCard={slide?.widthCards}
-              />
-            </article>
+            <Slide
+              key={slide.title}
+              data={slide.dataCards}
+              height={slide.heightSlide}
+              title={slide.title}
+              widthCard={slide?.widthCards}
+            />
           ))
         }
-        <BtnReadMore title="Read more" />
+        <BtnReadMore title="Read more" url="/news" />
       </section>
     </>
   )
