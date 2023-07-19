@@ -1,3 +1,44 @@
-.align__paragraphs {
+.my-6 {
+  margin: 60px 0;
+}
+.article__
+
+.article__about_us {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 15px;
+}
+
+.title__about_us {
+  text-align: center;
+}
+
+.paragraphs__about_us {
+  display: flex;
+  flex-direction: column;
   text-align: justify;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+@media (width >= 640px) {
+  .title__about_us {
+    text-align: left;
+  }
+
+  .paragraphs__about_us {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+@media (width >= 940px) {
+  .article__about_us {
+    margin-right: 45px;
+    padding: 0 0 0 15px;
+  }
+  .paragraphs__about_us {
+    margin-bottom: 20px;
+  }
 }

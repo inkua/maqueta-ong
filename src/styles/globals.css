@@ -75,11 +75,6 @@ label {
   display: inline-block;
 }
 
-section,
-article {
-  margin: 0;
-}
-
 /* Input, Select, Textarea */
 input,
 select,
@@ -144,7 +139,7 @@ textarea {
   background-color: #000000;
 }
 
-.sections-container {
+.sections-slides {
   margin-bottom: 45px;
   display: flex;
   flex-direction: column;
@@ -152,52 +147,10 @@ textarea {
   padding: 5px;
 }
 
-.article {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 0 15px;
-}
-
-.article-title {
-  text-align: center;
-}
-
-.article-section {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 10px;
-}
-
-@media (width >= 640px) {
-  .title-article {
-    text-align: left;
-  }
-
-  .article-section {
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px;
-  }
-}
-
 @media (width >=940px) {
-  .sections-container {
-    margin: 25px 45px 60px 45px;
+  .sections-slides {
+    margin: 25px 0 60px 45px;
     gap: 40px;
     padding: 0;
-  }
-
-  .article {
-    padding: 0 0 0 15px;
-  }
-
-  .article-description {
-    font-size: 20px;
-  }
-
-  .article-section {
-    margin-bottom: 20px;
   }
 }

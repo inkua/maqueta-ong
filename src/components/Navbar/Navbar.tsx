@@ -47,16 +47,14 @@ const Navbar = () => {
           >
             <span className={`${styles.menu__icon} ${isMenuOpen ? styles.open : ''}`}></span>
           </button>
-          <Link href='/'>
-            <Image src={logo} alt={name} width={100} height={50} className={styles.navbar__logo} />
-          </Link>
+          <Image src={logo} alt={name} width={100} height={50} className={styles.navbar__logo} />
         </div>
         <div className={styles.navbar__links}>
           <ul className={`${styles.navbar__menu} ${isMenuOpen ? styles.open : ''}`}>
             <h3 className={styles.menu__title}>Menu</h3>
             {menuList.map((item) => (
               <li key={item.url} className={styles.menu__item}>
-                <Link href={item.url} className={styles.menu__link} onClick={() => setIsMenuOpen(false)}>
+                <Link href={item.url} className={styles.menu__link} onClick={handleMenuToggle}>
                   {item.title}
                 </Link>
               </li>
