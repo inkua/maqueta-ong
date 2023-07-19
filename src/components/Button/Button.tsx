@@ -1,15 +1,25 @@
+import Link from 'next/link';
 import styles from './Button.module.css';
 
-type PropBtnReadMore = {
+type PropButton = {
   title: string;
+  url: string;
   showArrow?: boolean;
   typeArrow?: string;
 }
 
-const BtnReadMore = ({ title, showArrow = true, typeArrow = '\u{1F86B}' }: PropBtnReadMore) => (
-  <button type="button" className={`${styles.read__more} button-transition`}>
-    {title} {showArrow && <span className={styles['read__more-arrow']}>{typeArrow}</span>}
-  </button>
-)
+const Button = (props: PropButton) => {
+  const {
+    title,
+    url = '/',
+    showArrow = true,
+    typeArrow = '\u{1F86B}'} = props;
 
-export default BtnReadMore;
+  return (
+    <Link href={url} className={`${styles.button} button-transition`}>
+      {title} {showArrow && <span className={styles['button-arrow']}>{typeArrow}</span>}
+    </Link>
+  )
+}
+
+export default Button;
