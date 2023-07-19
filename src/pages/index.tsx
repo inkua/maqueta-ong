@@ -1,6 +1,6 @@
-import BtnReadMore from "@Component/BtnReadMore";
 import Hero from "@Component/Hero";
 import Slide from "@Component/Slide";
+import BtnReadMore from "@Component/Button";
 import DATA from "data/ong";
 import styles from './index/index.module.css'
 
@@ -12,25 +12,24 @@ const HomePage = () => {
   return (
     <>
       <Hero data={dataHero} />
-      <section className='sections-slides'>
-        <article className={`${styles.article__about_us} ${styles["my-6"]}`}>
-          <h2 className={styles.title__about_us}>{dataAboutUs.title}</h2>
-          <div className={styles.paragraphs__about_us}>
-            <p>{dataAboutUs.paragraphOne}</p>
-            <p>{dataAboutUs.paragraphTwo}</p>
+      <section className='sections-container'>
+        <article className='article'>
+          <h2 className='article-title'>{dataAboutUs.title}</h2>
+          <div className={`article-section ${styles.align__paragraphs}`}>
+            <p className="article-description">{dataAboutUs.paragraphOne}</p>
+            <p className="article-description">{dataAboutUs.paragraphTwo}</p>
           </div>
-          <BtnReadMore showArrow={false} />
+          <BtnReadMore title="Read more" url="/about-us" showArrow={false} />
         </article>
         {
           dataSlides.map((slide) => (
-            <article key={slide.title} className={styles["my-6"]} >
-              <Slide
-                data={slide.dataCards}
-                height={slide.heightSlide}
-                title={slide.title}
-                widthCard={slide?.widthCards}
-              />
-            </article>
+            <Slide
+              key={slide.title}
+              data={slide.dataCards}
+              height={slide.heightSlide}
+              title={slide.title}
+              widthCard={slide?.widthCards}
+            />
           ))
         }
       </section>

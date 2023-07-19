@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Hero from "@Component/Hero";
 import Slide from "@Component/Slide";
-import BtnReadMore from "@Component/BtnReadMore";
+import BtnReadMore from "@Component/Button";
 import DATA from "data/ong";
 import styles from "./news.module.css";
 
@@ -13,7 +13,7 @@ const News = () => {
   return (
     <>
       <Hero data={dataHero} />
-      <section className='sections-slides'>
+      <section className='sections-container'>
         <div className={styles.news__collaborate}>
           <h3 className={styles.collaborate__title}>You can collaborate here</h3>
           <Link href='/donate' className={`${styles.collaborate__link} bg-button button-transition`}>
@@ -22,17 +22,16 @@ const News = () => {
         </div>
         {
           dataSlides.map((slide) => (
-            <article key={slide.title} className={styles["my-6"]}>
-              <Slide
-                data={slide.dataCards}
-                height={slide.heightSlide}
-                title={slide.title}
-                widthCard={slide?.widthCards}
-              />
-            </article>
+            <Slide
+              key={slide.title}
+              data={slide.dataCards}
+              height={slide.heightSlide}
+              title={slide.title}
+              widthCard={slide?.widthCards}
+            />
           ))
         }
-        <BtnReadMore />
+        <BtnReadMore title="Read more" url="/news" />
       </section>
     </>
   )

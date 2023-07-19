@@ -1,18 +1,17 @@
 import PropTypes from "prop-types";
+import styles from "./Card.module.css";
 
 type CardProps = {
   title: string;
-  text: string;
+  description: string;
 };
 
-const Card = ({ title, text } : CardProps)  => {
+const Card = ({ title, description }: CardProps) => {
   return (
-    <div className="card bg-secondary border border-0 text-white">
-      <div className="card-body" id='card-body'>
-        <h2 className="card-title text-center py-3">{title}</h2>
-        <p className="card-text py-4 text-start p-5">{text}</p>
-      </div>
-    </div>
+    <article className={styles.card}>
+      <h3 className={styles.card__title}>{title}</h3>
+      <p className={styles.card__description}>{description}</p>
+    </article>
   );
 };
 
