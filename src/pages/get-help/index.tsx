@@ -1,18 +1,17 @@
 import Accordion from "@Component/Accordion";
+import useContextData from "hooks/useContextData";
 import Hero from "@Component/Hero";
-import DATA from 'data/ong';
 import styles from './getHelp.module.css';
 
 const GetHelp = () => {
-  //data for tests
-  const dataHero = DATA.pages.getHelp.dataHero;
-  const data = DATA.pages.getHelp.accordions;
+  const dataGetHelpPage = useContextData().pages.getHelp;
+  const { dataHero, dataAccordions } = dataGetHelpPage;
 
   return (
     <>
       <Hero data={dataHero} />
       <section className={styles.accordions}>
-        {data.map((item) => (
+        {dataAccordions.map((item) => (
           <Accordion key={item.title} data={item} />
         ))}
       </section>

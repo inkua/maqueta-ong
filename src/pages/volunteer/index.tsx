@@ -1,38 +1,40 @@
 import Card from '@Component/Card/Card';
-import DATA from 'data/ong';
-
-const Contenido_Cards = DATA.requeriments; //objetivos y requerimientos
-const volunteerExperiences = DATA.experiences; // experiencias
+import Hero from '@Component/Hero';
+import styles from './volunteer.module.css'
+import useContextData from 'hooks/useContextData';
 
 const Volunteer = () => {
+  const dataVolunteerPage = useContextData().pages.volunteer;
+  const {
+    dataHero,
+    dataVolunteerDoes,
+    dataObjectivesAndRequirements,
+    dataExperiencesOfVolunteers
+  } = dataVolunteerPage;
+
   return (
     <>
-    <div>Volunteer</div>
-    <section className='h-50 d-flex flex-nowrap flex-xxl-nowrap flex-xl-nowrap flex-md-wrap flex-sm-wrap flex-wrap p-5 my-5 gap-5 container container-sm container-md container-lg'>
-      {
-        Contenido_Cards.map((contenido) => {
-          return(
-            <Card key={contenido.id}
-            title = {contenido.titulo}
-            text = {contenido.texto} />
-          )
-        })
-      }
-    </section>
-    <section className='h-100 d-flex flex-column'>
-      <h2 className='text-center py-5 my-5'>Experiences Of Our Volunteers</h2>
-      <div className='h-100 d-flex p-5 my-5 gap-5 container container-sm container-md container-lg'>
-      {
-        volunteerExperiences.map((experiencias) => {
-          return(
-            <Card key={experiencias.id}
-            title={experiencias.name}
-            text={experiencias.experience} />
-          )
-        })
-      }
-      </div>
-    </section>
+      <Hero data={dataHero} />
+      <section className='sections-container'>
+        <article className='article'>
+          <h2 className='article-title'>{dataVolunteerDoes.title}</h2>
+          <p className={`article-description ${styles.align__paragraph}`}>
+            {dataVolunteerDoes.description}
+          </p>
+          <section className={`article-section ${styles.section__history}`}>
+            <Card
+              key={dataObjectivesAndRequirements.objetives.title}
+              title={dataObjectivesAndRequirements.objetives.title}
+              description={dataObjectivesAndRequirements.objetives.description}
+            />
+            <Card
+              key={dataObjectivesAndRequirements.requirements.title}
+              title={dataObjectivesAndRequirements.requirements.title}
+              description={dataObjectivesAndRequirements.requirements.description}
+            />
+          </section>
+        </article>
+      </section>
     </>
   )
 }
