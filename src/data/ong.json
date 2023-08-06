@@ -1,0 +1,349 @@
+{
+  "name": "ONG'S NAME",
+  "description": "ONG'S DESCRIPTION",
+  "email": "ONG'S EMAIL",
+  "phone": "ONG'S PHONE",
+  "address": "ONG'S ADDRESS",
+  "socialMedia": [
+    {
+      "name": "WhatsApp",
+      "link": "/",
+      "logo": "/images/whatsApp-logo.png"
+    },
+    {
+      "name": "Facebook",
+      "link": "/",
+      "logo": "/images/facebook-logo.png"
+    },
+    {
+      "name": "Instagram",
+      "link": "/",
+      "logo": "/images/instagram-logo.png"
+    }
+  ],
+  "logo": "/images/ong-logo.png",
+  "styles": {
+    "colors": {
+      "primary": "#D9D9D9",
+      "card": "#5D5F60",
+      "button": "#2A2A2A",
+      "buttonLang": "#474849",
+      "form": {
+        "container": "#E9E7E7",
+        "input": "#CBC9C9"
+      },
+      "fontColorPrimary": "#000000",
+      "fontColorSecondary": "#FFFFFF"
+    }
+  },
+  "pages": {
+    "indexPage": {
+      "dataHero": {
+        "title": "ONG'S NAME",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor",
+        "linkContent": "Donate now",
+        "linkAction": "/donate",
+        "fillLinkButton": true,
+        "urlImage": "/images/img-index.png"
+      },
+      "dataAboutUs": {
+        "title": "About us",
+        "paragraphOne": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
+        "paragraphTwo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit"
+      },
+      "dataSlides": [
+        {
+          "title": "Our partners",
+          "heightSlide": "350px",
+          "widthCards": 327,
+          "dataCards": [
+            {
+              "id": 1,
+              "image": "",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "buttonMore": true
+            },
+            {
+              "id": 2,
+              "image": "",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "buttonMore": true
+            },
+            {
+              "id": 3,
+              "image": "",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "buttonMore": true
+            },
+            {
+              "id": 4,
+              "image": "",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "buttonMore": true
+            }
+          ]
+        },
+        {
+          "title": "Our supporters",
+          "heightSlide": "300px",
+          "widthCards": 327,
+          "dataCards": [
+            {
+              "id": 1,
+              "image": "",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "buttonMore": true
+            },
+            {
+              "id": 2,
+              "image": "",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "buttonMore": true
+            },
+            {
+              "id": 3,
+              "image": "",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "buttonMore": true
+            },
+            {
+              "id": 4,
+              "image": "",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "buttonMore": true
+            }
+          ]
+        }
+      ]
+    },
+    "aboutUs": {
+      "dataHero": {
+        "title": "ABOUT US",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor",
+        "linkContent": "Read More",
+        "linkAction": "/about-us",
+        "fillLinkButton": true,
+        "urlImage": "/images/img-aboutus-1.png"
+      },
+      "dataOurHistory": {
+        "title": "Our History",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse. \n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+        "cards": [
+          {
+            "title": "Our value",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse."
+          },
+          {
+            "title": "What we support",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse."
+          }
+        ]
+      },
+      "dataDiviser": {
+        "description": "Important data or number that calls the attention of the user",
+        "image": "/images/img-aboutus-2.png"
+      },
+      "dataSlide": {
+        "title": "Our actions",
+        "heightSlide": "350px",
+        "widthCards": 327,
+        "dataCards": [
+          {
+            "id": 1,
+            "title": "Title 1",
+            "image": ""
+          },
+          {
+            "id": 2,
+            "title": "Title 2",
+            "image": ""
+          },
+          {
+            "id": 3,
+            "title": "Title 3",
+            "image": ""
+          },
+          {
+            "id": 4,
+            "title": "Title 4",
+            "image": ""
+          }
+        ]
+      }
+    },
+    "news": {
+      "dataHero": {
+        "title": "Latest news",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor",
+        "linkContent": "Go to video",
+        "linkAction": "https://www.youtube.com/embed/hlL9hcCNS6U",
+        "urlImage": "",
+        "urlVideo": "https://www.youtube.com/embed/hlL9hcCNS6U"
+      },
+      "dataSlides": [
+        {
+          "title": "Ukraine now",
+          "heightSlide": "330px",
+          "widthCards": 327,
+          "dataCards": [
+            {
+              "id": 1,
+              "image": "",
+              "title": "Titulo 1",
+              "buttonArrow": true
+            },
+            {
+              "id": 2,
+              "image": "",
+              "title": "Titulo 2",
+              "buttonArrow": true
+            },
+            {
+              "id": 3,
+              "image": "",
+              "title": "Titulo 3",
+              "buttonArrow": true
+            },
+            {
+              "id": 4,
+              "image": "",
+              "title": "Titulo 4",
+              "buttonArrow": true
+            },
+            {
+              "id": 5,
+              "image": "",
+              "title": "Titulo 5",
+              "buttonArrow": true
+            }
+          ]
+        },
+        {
+          "title": "Stories and testimonies",
+          "heightSlide": "350px",
+          "widthCards": 300,
+          "dataCards": [
+            {
+              "id": 1,
+              "image": "",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "buttonMore": true
+            },
+            {
+              "id": 2,
+              "image": "",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "buttonMore": true
+            },
+            {
+              "id": 3,
+              "image": "",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "buttonMore": true
+            },
+            {
+              "id": 4,
+              "image": "",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "buttonMore": true
+            },
+            {
+              "id": 5,
+              "image": "",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "buttonMore": true
+            }
+          ]
+        }
+      ]
+    },
+    "volunteer": {
+      "dataHero": {
+        "title": "Want to join us",
+        "description": "BECOME A VOLUNTEER \n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor",
+        "linkContent": "Be a volunteer",
+        "linkAction": "/volunteer-form",
+        "urlImage": "/images/img-volunteers.png"
+      },
+      "dataVolunteerDoes": {
+        "title": "Know what a volunteer does",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse."
+      },
+      "dataObjectivesAndRequirements": {
+        "objetives": {
+          "title": "Out Objectives",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse."
+        },
+        "requirements": {
+          "title": "Requirements",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse."
+        }
+      },
+      "dataExperiencesOfVolunteers": [
+        {
+          "title": "Name 1",
+          "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“"
+        },
+        {
+          "title": "Name 2",
+          "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“"
+        },
+        {
+          "title": "Name 3",
+          "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“"
+        }
+      ]
+    },
+    "volunteerForm": {
+      "imageForm": "/images/img-volunteerForm-2.png",
+      "dataHero": {
+        "title": "Want to join us",
+        "description": "BECOME A VOLUNTEER \n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor",
+        "linkContent": "Complete the form",
+        "linkAction": "#volunteer_form",
+        "urlImage": "/images/img-volunteers.png"
+      }
+    },
+    "getHelp": {
+      "dataHero": {
+        "title": "I NEED HELP",
+        "description": "DO YOU NEED SHELTER? CLOTHES? FOOD? \n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor",
+        "linkContent": "GET HELP",
+        "linkAction": "/get-help",
+        "urlImage": "/images/img-volunteers.png"
+      },
+      "dataAccordions": [
+        {
+          "title": "ONG #1",
+          "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor“",
+          "isOpen": true
+        },
+        {
+          "title": "ONG #2",
+          "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor“",
+          "isOpen": true
+        },
+        {
+          "title": "ONG #3",
+          "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor“",
+          "isOpen": true
+        },
+        {
+          "title": "ONG #4",
+          "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor“",
+          "isOpen": true
+        },
+        {
+          "title": "ONG #5",
+          "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor“",
+          "isOpen": true
+        },
+        {
+          "title": "ONG #6",
+          "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor“",
+          "isOpen": true
+        }
+      ]
+    }
+  }
+}
