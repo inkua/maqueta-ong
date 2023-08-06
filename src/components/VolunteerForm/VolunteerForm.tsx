@@ -1,14 +1,11 @@
 import { useState } from 'react';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import styles from './VolunteerForm.module.css';
-import personIcon from 'assets/person.svg';
-import emailIcon from 'assets/mail.svg';
-import phoneIcon from 'assets/phone.svg';
 
 type EventType = React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>;
 
 type ImageForm = {
-  imageForm: string | StaticImageData;
+  imageForm: string;
 }
 
 const VolunteerForm = ({ imageForm } : ImageForm) => {
@@ -65,7 +62,7 @@ const VolunteerForm = ({ imageForm } : ImageForm) => {
             onChange={handleInputChange}
             required
           />
-          <Image src={personIcon} alt='person icon' width={18} className={styles.field__icon} />
+          <Image src="/images/person.svg" alt='person icon' width={18} height={18} className={styles.field__icon} />
         </div>
         <div className={styles.field}>
           <input
@@ -89,7 +86,7 @@ const VolunteerForm = ({ imageForm } : ImageForm) => {
             onChange={handleInputChange}
             required
           />
-          <Image src={emailIcon} alt='email icon' width={18} className={styles.field__icon} />
+          <Image src="/images/mail.svg" alt='email icon' width={18} height={18} className={styles.field__icon} />
         </div>
         <div className={styles.field}>
           <select
@@ -124,7 +121,7 @@ const VolunteerForm = ({ imageForm } : ImageForm) => {
             onChange={handleInputChange}
             required
           />
-          <Image src={phoneIcon} alt='phone icon' width={18} className={styles.field__icon} />
+          <Image src="/images/phone.svg" alt='phone icon' width={18} height={18} className={styles.field__icon} />
         </div>
         <div className={styles.field}>
           <label htmlFor="comment" className={styles.field__label}>Tell us why you want to join</label>
