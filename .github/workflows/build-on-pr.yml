@@ -1,8 +1,8 @@
 name: "Bot: Review based on building"
 on:
-  pull_request_target: {}
+  pull_request: {}
   pull_request_review_comment:
-    types: [created, edited]
+    types: [created]
 
 jobs:
   run-linter:
@@ -12,7 +12,7 @@ jobs:
       - name: Checkout git repository
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
+          ref: ${{ github.event.pull_request.head.sha }}
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
