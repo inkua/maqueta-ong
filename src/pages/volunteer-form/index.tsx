@@ -1,12 +1,15 @@
+import useContextData from "hooks/useContextData";
 import Hero from "@Component/Hero";
 import VolunteerForm from "@Component/VolunteerForm";
-import DATA from "data/ong";
 
 const VolunteerFormPage = () => {
+  const dataVolunteerFormPage = useContextData().pages.volunteerForm;
+  const { dataHero, imageForm } = dataVolunteerFormPage;
+
   return (
     <>
-      <Hero data={DATA.pages.volunteerForm.dataHero} />
-      <VolunteerForm imageForm={DATA.pages.volunteerForm.imageForm} />
+      <Hero data={dataHero} />
+      <VolunteerForm imageForm={imageForm} />
     </>
   )
 }

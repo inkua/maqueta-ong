@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import useContextData from 'hooks/useContextData';
 import SwitcherLanguage from '@Component/SwitcherLanguage';
-import DATA from 'data/ong';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [menuList, setMenuList] = useState([]);
-  const { logo, name, pages } = DATA;
+  const { logo, name, pages } = useContextData();
   const languages = ['EN', 'YKP'];
 
   const handleMenuToggle = () => {

@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import styles from './hero.module.css';
 import Link from 'next/link';
 
@@ -12,7 +12,7 @@ type PropsHero = {
     linkContent: string; //this prop has the content of the link button
     linkAction: string //this prop has link button action
     fillLinkButton?: boolean;
-    urlImage: string | StaticImageData;
+    urlImage: string;
     urlVideo?: string;
   }
 }
@@ -44,7 +44,7 @@ const Hero = ({ data }: PropsHero) => {
       </iframe>
       :
     <section className={styles.hero}>
-      <Image src={urlImage} alt={title} className={styles.hero__img} priority />
+      <Image src={urlImage} alt={title} className={styles.hero__img} width={1600} height={700} priority />
       <div className={`${styles.hero__content}`}>
         <h2 className={styles.hero__title}>{title}</h2>
         <p className={styles.hero__description} dangerouslySetInnerHTML={{__html: formattedDescription}}></p>

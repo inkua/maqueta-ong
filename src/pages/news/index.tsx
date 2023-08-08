@@ -1,14 +1,13 @@
 import Link from "next/link";
+import useContextData from "hooks/useContextData";
 import Hero from "@Component/Hero";
 import Slide from "@Component/Slide";
 import BtnReadMore from "@Component/Button";
-import DATA from "data/ong";
 import styles from "./news.module.css";
 
 const News = () => {
-  //object of test
-  const dataHero = DATA.pages.news.dataHero;
-  const dataSlides = DATA.pages.news.dataSlides;
+  const dataNewsPage = useContextData().pages.news;
+  const { dataHero, dataSlides } = dataNewsPage;
 
   return (
     <>

@@ -1,30 +1,36 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+
+import DataProvider from 'contexts/DataContext';
+import Layout from '@Component/Layout';
+import useContextData from 'hooks/useContextData';
 import 'styles/globals.css';
 
-import Layout from '@Component/Layout';
-import DATA from 'data/ong';
-
 export default function MyApp({ Component, pageProps }: AppProps) {
+  console.log(useContextData());
+  const { styles } = useContextData();
+
   return (
-    <Layout>
-    <Head>
-      <title>Maqueta ONG</title>
-    </Head>
-      <Component {...pageProps} />
-    <style jsx global>{`
-      :root {
-        --color-primary: ${DATA.styles.colors.primary};
-        --color-card: ${DATA.styles.colors.card};
-        --color-form: ${DATA.styles.colors.form.container};
-        --color-input: ${DATA.styles.colors.form.input};
-        --color-button: ${DATA.styles.colors.button};
-        --color-button-lang: ${DATA.styles.colors.buttonLang};
-        --color-font-primary: ${DATA.styles.colors.fontColorPrimary};
-        --color-font-secondary: ${DATA.styles.colors.fontColorSecondary};
-      }
-    `}
-    </style>
-    </Layout>
+    <DataProvider>
+      <Layout>
+        <Head>
+          <title>Maqueta ONG</title>
+        </Head>
+        <Component {...pageProps} />
+        <style jsx global>{`
+        :root {
+          --color-primary: ${styles.colors.primary};
+          --color-card: ${styles.colors.card};
+          --color-form: ${styles.colors.form.container};
+          --color-input: ${styles.colors.form.input};
+          --color-button: ${styles.colors.button};
+          --color-button-lang: ${styles.colors.buttonLang};
+          --color-font-primary: ${styles.colors.fontColorPrimary};
+          --color-font-secondary: ${styles.colors.fontColorSecondary};
+          }
+        `}
+        </style>
+      </Layout>
+    </DataProvider>
   )
 }

@@ -1,13 +1,12 @@
+import useContextData from "hooks/useContextData";
 import Hero from "@Component/Hero";
 import Slide from "@Component/Slide";
 import BtnReadMore from "@Component/Button";
-import DATA from "data/ong";
 import styles from './index/index.module.css'
 
 const HomePage = () => {
-  const dataAboutUs = DATA.pages.indexPage.aboutUs;
-  const dataHero = DATA.pages.indexPage.dataHero;
-  const dataSlides = DATA.pages.indexPage.dataSlides;
+  const dataIndexPage = useContextData().pages.indexPage;
+  const { dataAboutUs, dataHero, dataSlides } = dataIndexPage;
 
   return (
     <>
