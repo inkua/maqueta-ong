@@ -160,24 +160,20 @@ textarea {
 }
 
 .article-title {
-  text-align: center;
+  text-align: left;
 }
 
 .article-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
   margin-bottom: 10px;
 }
 
 @media (width >= 640px) {
-  .title-article {
-    text-align: left;
-  }
-
   .article-section {
-    flex-direction: row;
-    justify-content: center;
     gap: 30px;
   }
 }

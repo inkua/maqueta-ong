@@ -7,7 +7,6 @@ import useContextData from 'hooks/useContextData';
 import 'styles/globals.css';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  console.log(useContextData());
   const { styles } = useContextData();
 
   return (
