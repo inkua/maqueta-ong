@@ -23,7 +23,7 @@ const Slide = ({ data, title, widthCard, height = '300px' }: SlideProps) => {
       sectionCurrent.style.height = `${height}`;
       return;
     }
-    sectionCurrent.style.height = '230px';
+    sectionCurrent.style.height = '200px';
   }, [isDesktop, height]);
 
   return (

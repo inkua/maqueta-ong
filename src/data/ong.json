@@ -54,7 +54,7 @@
       "dataSlides": [
         {
           "title": "Our partners",
-          "heightSlide": "350px",
+          "heightSlide": "335px",
           "widthCards": 327,
           "dataCards": [
             {
@@ -85,7 +85,7 @@
         },
         {
           "title": "Our supporters",
-          "heightSlide": "300px",
+          "heightSlide": "285px",
           "widthCards": 327,
           "dataCards": [
             {
@@ -145,7 +145,7 @@
       },
       "dataSlide": {
         "title": "Our actions",
-        "heightSlide": "350px",
+        "heightSlide": "335px",
         "widthCards": 327,
         "dataCards": [
           {
@@ -183,7 +183,7 @@
       "dataSlides": [
         {
           "title": "Ukraine now",
-          "heightSlide": "330px",
+          "heightSlide": "315px",
           "widthCards": 327,
           "dataCards": [
             {
@@ -220,7 +220,7 @@
         },
         {
           "title": "Stories and testimonies",
-          "heightSlide": "350px",
+          "heightSlide": "335px",
           "widthCards": 300,
           "dataCards": [
             {
