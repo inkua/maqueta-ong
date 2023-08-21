@@ -145,52 +145,44 @@ textarea {
 }
 
 .sections-container {
-  margin-bottom: 45px;
+  max-width: 1300px;
+  margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 5px;
+  padding: 0px 20px;
 }
 
 .article {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 0 15px;
 }
 
 .article-title {
-  text-align: center;
+  text-align: left;
 }
 
 .article-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
   margin-bottom: 10px;
 }
 
 @media (width >= 640px) {
-  .title-article {
-    text-align: left;
-  }
-
   .article-section {
-    flex-direction: row;
-    justify-content: center;
     gap: 30px;
   }
 }
 
 @media (width >=940px) {
   .sections-container {
-    margin: 25px 45px 60px 45px;
+    margin: 0 auto 60px auto;
     gap: 40px;
-    padding: 0;
-  }
-
-  .article {
-    padding: 0 0 0 15px;
+    padding: 0 25px;
   }
 
   .article-description {

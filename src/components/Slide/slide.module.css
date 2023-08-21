@@ -1,5 +1,5 @@
 .slide__title {
-  margin-left: 15px;
+  margin-bottom: 15px;
 }
 
 .slide {
@@ -9,7 +9,7 @@
   overflow-x: scroll;
   scroll-behavior: smooth;
   overflow-y: hidden;
-  padding: 15px;
+  padding-bottom: 15px;
 }
 
 .content-center {

@@ -54,7 +54,7 @@
       "dataSlides": [
         {
           "title": "Our partners",
-          "heightSlide": "350px",
+          "heightSlide": "335px",
           "widthCards": 327,
           "dataCards": [
             {
@@ -85,7 +85,7 @@
         },
         {
           "title": "Our supporters",
-          "heightSlide": "300px",
+          "heightSlide": "285px",
           "widthCards": 327,
           "dataCards": [
             {
@@ -145,7 +145,7 @@
       },
       "dataSlide": {
         "title": "Our actions",
-        "heightSlide": "350px",
+        "heightSlide": "335px",
         "widthCards": 327,
         "dataCards": [
           {
@@ -183,7 +183,7 @@
       "dataSlides": [
         {
           "title": "Ukraine now",
-          "heightSlide": "330px",
+          "heightSlide": "315px",
           "widthCards": 327,
           "dataCards": [
             {
@@ -220,7 +220,7 @@
         },
         {
           "title": "Stories and testimonies",
-          "heightSlide": "350px",
+          "heightSlide": "335px",
           "widthCards": 300,
           "dataCards": [
             {
@@ -279,20 +279,23 @@
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse."
         }
       },
-      "dataExperiencesOfVolunteers": [
-        {
-          "title": "Name 1",
-          "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“"
-        },
-        {
-          "title": "Name 2",
-          "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“"
-        },
-        {
-          "title": "Name 3",
-          "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“"
-        }
-      ]
+      "dataExperiencesOfVolunteers": {
+        "title": "Experiences of our volunteers",
+        "experiences": [
+          {
+            "title": "Name 1",
+            "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“"
+          },
+          {
+            "title": "Name 2",
+            "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“"
+          },
+          {
+            "title": "Name 3",
+            "description": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim“"
+          }
+        ]
+      }
     },
     "volunteerForm": {
       "imageForm": "/images/img-volunteerForm-2.png",

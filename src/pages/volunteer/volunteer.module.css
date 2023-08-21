@@ -1,0 +1,19 @@
+.align__title,
+.align__paragraph {
+  text-align: center;
+}
+
+.align__paragraph {
+  margin-top: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.objectives__requirements,
+.experiences {
+  margin-top: 30px;
+}
+
+.experiences {
+  padding: 0 0 0 15px;
+}
