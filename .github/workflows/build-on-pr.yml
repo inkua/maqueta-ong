@@ -20,28 +20,16 @@ jobs:
       - name: Install Node.js dependencies
         run: npm install
       - name: Build
-        run: npm run build > build_output.txt 2>&1 || true
-        id: build
-      - name: Upload Build Output
-        uses: actions/upload-artifact@v2
-        with:
-          name: build-output
-          path: build_output.txt
+        run: npm run build
       - uses: ntsd/auto-request-changes-action@v2
         if: ${{ failure() }}
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           comment-body: |
-            The build has failed. Console output was:
-            ```
-            $(cat build_output.txt)
-            ```
+            The build has failed. Check the runner's output. 
       - uses: hmarr/auto-approve-action@v2
         if: ${{ success() }}
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-          comment-body: |
-            The build has failed. Console output was:
-            ```
-            $(cat build_output.txt)
-            ```
+          review-message: |
+            The build has succeed. 
