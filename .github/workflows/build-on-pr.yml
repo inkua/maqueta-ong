@@ -1,6 +1,6 @@
 name: "Bot: Review based on building"
 on:
-  pull_request: {}
+  pull_request:
   pull_request_review_comment:
     types: [created]
 
@@ -9,28 +9,24 @@ jobs:
     name: Run builder
     runs-on: ubuntu-latest
     env:
-      GH_TOKEN : ${{github.token}}
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Checkout PR 
-        run: |
-          gh pr checkout ${{ github.event.pull_request.number }}
+        uses: actions/checkout@v2
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
           node-version: 18
       - name: Install Node.js dependencies
-        run: npm i
+        run: npm install
       - name: Build
-        id: build
         run: npm run build > build_output.txt 2>&1 || true
-        continue-on-error: true
-      - name: Capture build output
-        id: console_output
-        run: |
-          echo "CONSOLE_OUTPUT=$(cat build_output.txt)" >> $GITHUB_ENV
-        continue-on-error: true
+        id: build
+      - name: Upload Build Output
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-output
+          path: build_output.txt
       - uses: ntsd/auto-request-changes-action@v2
         if: ${{ failure() }}
         with:
@@ -38,14 +34,14 @@ jobs:
           comment-body: |
             The build has failed. Console output was:
             ```
-            ${{ env.CONSOLE_OUTPUT }}
+            $(cat build_output.txt)
             ```
       - uses: hmarr/auto-approve-action@v2
         if: ${{ success() }}
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-          review-message: |
+          comment-body: |
             The build has failed. Console output was:
             ```
-            ${{ env.CONSOLE_OUTPUT }}
+            $(cat build_output.txt)
             ```
