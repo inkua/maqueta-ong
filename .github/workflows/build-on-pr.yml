@@ -27,7 +27,7 @@ jobs:
         id: build
         continue-on-error: true
       - name: Capture build output
-        run: echo "::set-output name=build_output::$(npm run build 2>&1)"
+        run: echo "{CONSOLE_OUTPUT}=$(npm run build 2>&1)" >> $GITHUB_OUTPUT
         continue-on-error: true
         id: console_output
       - uses: ntsd/auto-request-changes-action@v2
@@ -37,7 +37,7 @@ jobs:
           comment-body: |
             The build has failed. Console output was:
             ```
-            ${{steps.console_output.outputs.build_output}}
+            ${{steps.console_output.outputs.CONSOLE_OUTPUT}}
             ```
       - uses: hmarr/auto-approve-action@v2
         if: ${{ github.event.pull_request && success() }}
@@ -45,6 +45,6 @@ jobs:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           review-message: |
             The build has failed. Console output was:
-              ```
-              ${{steps.console_output.outputs.build_output}}
-              ```
+            ```
+            ${{steps.console_output.outputs.CONSOLE_OUTPUT}}
+            ```
