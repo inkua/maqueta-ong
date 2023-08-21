@@ -43,4 +43,8 @@ jobs:
         if: ${{ github.event.pull_request && success() }}
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-          review-message: "The build has succeed."
+          comment-body: |
+            The build has failed. Console output was:
+            ```
+            ${{steps.console_output.outputs}}
+            ```
