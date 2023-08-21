@@ -8,9 +8,14 @@ jobs:
   run-linter:
     name: Run linter
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN : ${{github.token}}
     steps:
-      - name: Checkout git repository
+      - name: Checkout repository
         uses: actions/checkout@v3
+      - name: Checkout PR 
+        run: |
+          gh pr checkout ${{ github.event.pull_request.number }}
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
