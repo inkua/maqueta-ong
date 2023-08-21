@@ -24,11 +24,21 @@ jobs:
         run: npm i
       - name: Build
         run: npm run build
+        id: build
+        continue-on-error: true
+      - name: Capture build output
+        run: echo "::set-output name=build_output::$(npm run build 2>&1)"
+        continue-on-error: true
+        id: console_output
       - uses: ntsd/auto-request-changes-action@v2
         if: ${{ github.event.pull_request && failure() }}
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-          comment-body: "The build has failed. Need changes before merging."
+          comment-body: |
+            The build has failed. Console output was:
+            ```
+            ${{steps.console_output.outputs}}
+            ```
       - uses: hmarr/auto-approve-action@v2
         if: ${{ github.event.pull_request && success() }}
         with:
