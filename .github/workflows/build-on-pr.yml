@@ -23,28 +23,29 @@ jobs:
       - name: Install Node.js dependencies
         run: npm i
       - name: Build
-        run: npm run build
         id: build
+        run: npm run build > build_output.txt 2>&1 || true
         continue-on-error: true
       - name: Capture build output
-        run: echo "{CONSOLE_OUTPUT}=$(npm run build 2>&1)" >> $GITHUB_OUTPUT
-        continue-on-error: true
         id: console_output
+        run: |
+          echo "CONSOLE_OUTPUT=$(cat build_output.txt)" >> $GITHUB_ENV
+        continue-on-error: true
       - uses: ntsd/auto-request-changes-action@v2
-        if: ${{ github.event.pull_request && failure() }}
+        if: ${{ failure() }}
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           comment-body: |
             The build has failed. Console output was:
             ```
-            ${{steps.console_output.outputs.CONSOLE_OUTPUT}}
+            ${{ env.CONSOLE_OUTPUT }}
             ```
       - uses: hmarr/auto-approve-action@v2
-        if: ${{ github.event.pull_request && success() }}
+        if: ${{ success() }}
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           review-message: |
             The build has failed. Console output was:
             ```
-            ${{steps.console_output.outputs.CONSOLE_OUTPUT}}
+            ${{ env.CONSOLE_OUTPUT }}
             ```
