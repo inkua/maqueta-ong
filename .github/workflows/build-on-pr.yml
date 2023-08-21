@@ -1,6 +1,6 @@
 name: "Bot: Review based on building"
 on:
-  pull_request: {}
+  pull_request_target: {}
   pull_request_review_comment:
     types: [created]
 
@@ -9,10 +9,9 @@ jobs:
     name: Run builder
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout git repository
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Checkout PR 
+        run: |
+          gh pr checkout ${{ github.event.pull_request.number }}
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
