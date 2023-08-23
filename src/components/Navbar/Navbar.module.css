@@ -1,5 +1,3 @@
-/* Navbar.module.css */
-
 .navbar {
   display: flex;
   position: relative;
@@ -14,9 +12,14 @@
   display: flex;
 }
 
-.navbar__logo {
+.link__logo {
   width: 70px;
   height: 48px;
+}
+
+.navbar__logo {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -95,7 +98,7 @@
   flex-direction: column;
   gap: 20px;
   list-style: none;
-  top: 74px;
+  top: calc(48px + 1.6rem);
   left: -70%;
   padding: 60px 12px 12px;
 }
@@ -219,7 +222,7 @@
     padding: 0.8rem 4rem;
   }
 
-  .navbar__logo {
+  .link__logo {
     width: 100px;
     height: 50px;
   }
