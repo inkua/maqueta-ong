@@ -17,7 +17,7 @@ const Accordion = ({ data: { title, description, isOpen = false } }: PropsAccord
   };
 
   return (
-    <div className={styles.accordion}>
+    <article className={styles.accordion}>
       <h3
         className={`${styles.accordion__title} ${open && styles['accordion__title-active']}`}
         onClick={toggleAccordion}
@@ -35,7 +35,7 @@ const Accordion = ({ data: { title, description, isOpen = false } }: PropsAccord
           {description}
         </p>
       </div>
-    </div>
+    </article>
   )
 }
 
