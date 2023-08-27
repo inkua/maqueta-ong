@@ -4,16 +4,29 @@ import { useEffect, useState } from 'react';
 import useContextData from 'hooks/useContextData';
 import SwitcherLanguage from '@Component/SwitcherLanguage';
 import styles from './Navbar.module.css';
+import useWindowSize from 'hooks/useWindowSize';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [menuList, setMenuList] = useState([]);
+  const windowWidth = useWindowSize();
   const { logo, name, pages } = useContextData();
   const languages = ['EN', 'YKP'];
 
+  //function to change the navbar state
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    // Style the <body> to lock the scroll
+    if (isMenuOpen && windowWidth < 640) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isMenuOpen, windowWidth])
+
 
   //effect to validate if the pages exist in the DATA, if so, add them to the menu
   useEffect(() => {
@@ -47,7 +60,7 @@ const Navbar = () => {
           >
             <span className={`${styles.menu__icon} ${isMenuOpen ? styles.open : ''}`}></span>
           </button>
-          <Link href='/'>
+          <Link href='/' className={styles.link__logo}>
             <Image src={logo} alt={name} width={100} height={50} className={styles.navbar__logo} />
           </Link>
         </div>
@@ -63,10 +76,18 @@ const Navbar = () => {
             ))}
           </ul>
           <div className={styles.navbar__buttons}>
-            <Link href="/get-help" className={`${styles.button__primary} button__help`}>
+            <Link
+              href="/get-help"
+              className={`${styles.button__primary} button__help`}
+              onClick={() => setIsMenuOpen(false)}
+            >
               Get Help
             </Link>
-            <Link href="/donate" className={`${styles.button__secondary} button__donate`}>
+            <Link
+              href="/donate"
+              className={`${styles.button__secondary} button__donate`}
+              onClick={() => setIsMenuOpen(false)}
+            >
               DONATE
             </Link>
           </div>

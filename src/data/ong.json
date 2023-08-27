@@ -307,6 +307,71 @@
         "urlImage": "/images/img-volunteers.png"
       }
     },
+    "donate": {
+      "dataHero": {
+        "title": "LET'S HELP OTHERS",
+        "description": "LET'S MAKE A CHANGE TOGETHER \n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor",
+        "linkContent": "DONATE NOW",
+        "linkAction": "/donate",
+        "urlImage": "/images/img-volunteers.png"
+      },
+      "guideToDonate": [
+        {
+          "title": "HOW TO DONATE?",
+          "tips": [
+            {
+              "title": "Tip 1",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim",
+              "isOpen": true
+            },
+            {
+              "title": "Tip 2",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim"
+            },
+            {
+              "title": "Tip 3",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim"
+            }
+          ]
+        },
+        {
+          "title": "DO'S",
+          "tips": [
+            {
+              "title": "Do 1",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim",
+              "isOpen": true
+            },
+            {
+              "title": "Do 2",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim"
+            },
+            {
+              "title": "Do 3",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim"
+            }
+          ]
+        },
+        {
+          "title": "DONT'S",
+          "tips": [
+            {
+              "title": "Don't 1",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim",
+              "isOpen": true
+            },
+            {
+              "title": "Don't 2",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim"
+            },
+            {
+              "title": "Don't 3",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimd minim"
+            }
+          ]
+        }
+      ]
+    },
     "getHelp": {
       "dataHero": {
         "title": "I NEED HELP",
