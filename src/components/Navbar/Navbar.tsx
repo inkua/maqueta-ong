@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import useContextData from 'hooks/useContextData';
 import SwitcherLanguage from '@Component/SwitcherLanguage';
@@ -15,11 +15,13 @@ const Navbar = () => {
   const languages = ['EN', 'YKP'];
   const router = useRouter();
 
+  //function to change the navbar state
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   useEffect(() => {
+    // Style the <body> to lock the scroll
     if (windowWidth >= 640) {
       if (isMenuOpen) {
         document.body.style.overflow = 'hidden';
@@ -29,6 +31,7 @@ const Navbar = () => {
     }
   }, [isMenuOpen, windowWidth]);
 
+  //effect to validate if the pages exist in the DATA, if so, add them to the menu
   useEffect(() => {
     setMenuList([]);
     if (pages.hasOwnProperty('indexPage')) {
