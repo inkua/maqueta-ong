@@ -1,6 +1,7 @@
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import useContextData from 'hooks/useContextData';
 import SwitcherLanguage from '@Component/SwitcherLanguage';
 import styles from './Navbar.module.css';
@@ -12,23 +13,22 @@ const Navbar = () => {
   const windowWidth = useWindowSize();
   const { logo, name, pages } = useContextData();
   const languages = ['EN', 'YKP'];
+  const router = useRouter();
 
-  //function to change the navbar state
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   useEffect(() => {
-    // Style the <body> to lock the scroll
-    if (isMenuOpen && windowWidth < 640) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
+    if (windowWidth >= 640) {
+      if (isMenuOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
     }
-  }, [isMenuOpen, windowWidth])
+  }, [isMenuOpen, windowWidth]);
 
-
-  //effect to validate if the pages exist in the DATA, if so, add them to the menu
   useEffect(() => {
     setMenuList([]);
     if (pages.hasOwnProperty('indexPage')) {
@@ -47,7 +47,6 @@ const Navbar = () => {
       setMenuList(menuList => [...menuList, {title: 'Volunteer', url: '/volunteer'}]);
     }
   }, [pages]);
-
 
   return (
     <header>
@@ -69,7 +68,7 @@ const Navbar = () => {
             <h3 className={styles.menu__title}>Menu</h3>
             {menuList.map((item) => (
               <li key={item.url} className={styles.menu__item}>
-                <Link href={item.url} className={styles.menu__link} onClick={() => setIsMenuOpen(false)}>
+                <Link href={item.url} className={`${styles.menu__link} ${windowWidth >= 640 && router.asPath === item.url ? styles.active : ''}`} onClick={() => setIsMenuOpen(false)}>
                   {item.title}
                 </Link>
               </li>

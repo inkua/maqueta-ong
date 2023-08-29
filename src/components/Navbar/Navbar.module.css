@@ -8,6 +8,10 @@
   padding: 0.8rem;
 }
 
+.active {
+  border-bottom: 2px solid var(--color-button);
+}
+
 .menu__toggle_logo {
   display: flex;
 }
