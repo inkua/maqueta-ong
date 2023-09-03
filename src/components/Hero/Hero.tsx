@@ -9,13 +9,13 @@ type PropsHero = {
   data: {
     title: string;
     description: string;
-    linkContent: string; //this prop has the content of the link button
-    linkAction: string //this prop has link button action
+    linkContent?: string; // This prop has the content of the link button
+    linkAction?: string; // This prop has link button action
     fillLinkButton?: boolean;
     urlImage: string;
     urlVideo?: string;
-  }
-}
+  };
+};
 
 const Hero = ({ data }: PropsHero) => {
   const {
@@ -25,13 +25,13 @@ const Hero = ({ data }: PropsHero) => {
     linkAction,
     fillLinkButton = false,
     urlImage,
-    urlVideo
+    urlVideo,
   } = data;
 
   const formattedDescription = description?.replace(/\n/g, '<br />');
 
   return (
-    urlVideo ?
+    urlVideo ? (
       <iframe
         width="100%"
         height="100%"
@@ -40,30 +40,38 @@ const Hero = ({ data }: PropsHero) => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         className={styles.hero__video}
         allowFullScreen
-        >
-      </iframe>
-      :
-    <section className={styles.hero}>
-      <Image src={urlImage} alt={title} className={styles.hero__img} width={1600} height={700} priority />
-      <div className={`${styles.hero__content}`}>
-        <h2 className={styles.hero__title}>{title}</h2>
-        <p className={styles.hero__description} dangerouslySetInnerHTML={{__html: formattedDescription}}></p>
-        <Link
-          scroll={false}
-          href={linkAction}
-          className={`${styles['hero__link-button']} button-transition
-                      ${fillLinkButton ? styles['link__button-fill'] : styles['link__button-border']}
-                      ${linkContent.length <= 10 && styles['text__uppercase']}`}>
-            {linkContent}
-        </Link>
-      </div>
-      <div className={styles.buttons__lang}>
-        <button type='button' className={styles['hero__button-en']}>EN</button>
-        <button type='button' className={styles['hero__button-ykp']}>YKP</button>
-      </div>
-      <div className={styles.hero__degradient}></div>
-    </section>
-  )
-}
+      ></iframe>
+    ) : (
+      <section className={styles.hero}>
+        <Image src={urlImage} alt={title} className={styles.hero__img} width={1600} height={700} priority />
+        <div className={`${styles.hero__content}`}>
+          <h2 className={styles.hero__title}>{title}</h2>
+          <p className={styles.hero__description} dangerouslySetInnerHTML={{ __html: formattedDescription }}></p>
+          {linkContent && linkAction && (
+            <Link
+              scroll={false}
+              href={linkAction}
+              className={`${styles['hero__link-button']} button-transition
+                          ${fillLinkButton ? styles['link__button-fill'] : styles['link__button-border']}
+                          ${linkContent.length <= 10 && styles['text__uppercase']}`}
+            >
+              {linkContent}
+            </Link>
+          )}
+        </div>
+        <div className={styles.buttons__lang}>
+          <button type="button" className={styles['hero__button-en']}>
+            EN
+          </button>
+          <button type="button" className={styles['hero__button-ykp']}>
+            YKP
+          </button>
+        </div>
+        <div className={styles.hero__degradient}></div>
+      </section>
+    )
+  );
+};
 
-export default Hero
+export default Hero;
+

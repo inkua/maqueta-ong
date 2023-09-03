@@ -35,21 +35,23 @@ const Navbar = () => {
   useEffect(() => {
     setMenuList([]);
     if (pages.hasOwnProperty('indexPage')) {
-      setMenuList(menuList => [...menuList, {title: 'Home', url: '/'}]);
+      setMenuList(menuList => [...menuList, { title: 'Home', url: '/' }]);
     }
 
     if (pages.hasOwnProperty('aboutUs')) {
-      setMenuList(menuList => [...menuList, {title: 'About Us', url: '/about-us'}]);
+      setMenuList(menuList => [...menuList, { title: 'About Us', url: '/about-us' }]);
     }
 
     if (pages.hasOwnProperty('news')) {
-      setMenuList(menuList => [...menuList, {title: 'News', url: '/news'}]);
+      setMenuList(menuList => [...menuList, { title: 'News', url: '/news' }]);
     }
 
     if (pages.hasOwnProperty('volunteer')) {
-      setMenuList(menuList => [...menuList, {title: 'Volunteer', url: '/volunteer'}]);
+      setMenuList(menuList => [...menuList, { title: 'Volunteer', url: '/volunteer' }]);
     }
   }, [pages]);
+
+  const isMobile = windowWidth < 640;
 
   return (
     <header>
@@ -71,11 +73,24 @@ const Navbar = () => {
             <h3 className={styles.menu__title}>Menu</h3>
             {menuList.map((item) => (
               <li key={item.url} className={styles.menu__item}>
-                <Link href={item.url} className={`${styles.menu__link} ${windowWidth >= 640 && router.asPath === item.url ? styles.active : ''}`} onClick={() => setIsMenuOpen(false)}>
+                <Link
+                  href={item.url}
+                  className={`${styles.menu__link} ${
+                    windowWidth >= 640 && router.asPath === item.url ? styles.active : ''
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   {item.title}
                 </Link>
               </li>
             ))}
+            {isMobile && (
+              <li className={styles.menu__item}>
+                <Link href='/contact-us' className={styles.menu__link} onClick={() => setIsMenuOpen(false)}>
+                  Contact Us
+                </Link>
+              </li>
+            )}
           </ul>
           <div className={styles.navbar__buttons}>
             <Link
