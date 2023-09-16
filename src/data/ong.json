@@ -298,14 +298,15 @@
       }
     },
     "volunteerForm": {
-      "imageForm": "/images/img-volunteerForm-2.png",
       "dataHero": {
         "title": "Want to join us",
         "description": "BECOME A VOLUNTEER \n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor",
         "linkContent": "Complete the form",
         "linkAction": "#volunteer_form",
         "urlImage": "/images/img-volunteers.png"
-      }
+      },
+      "imageForm": "/images/img-volunteerForm-2.png",
+      "emailToReceiveData": "example@gmail.com"
     },
     "donate": {
       "dataHero": {
