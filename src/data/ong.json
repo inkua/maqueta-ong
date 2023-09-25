@@ -116,6 +116,37 @@
         }
       ]
     },
+    "contactUs": {
+      "dataHero": {
+        "title": "CONTACT US",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "urlImage":"/images/img-contact-us.png"
+      },
+      "getInTouchTitle": "Get in Touch",
+      "getInTouchDescription": "We'd love to hear from you.",
+      "contactMethods": [
+        {
+          "icon":"/images/whatsappphone.svg",
+          "title": "Call us",
+          "description": "+00 00 0000 0000"
+        },
+        {
+          "icon":"/images/mail.svg",
+          "title": "Send us an Email",
+          "description": "ngouKraine@contactus.com"
+        },
+        {
+          "icon":"/images/fbphone.svg",
+          "title": "Find us on Facebook",
+          "description": "NGO for Ukraine"
+        },
+        {
+          "icon":"/images/igphone.svg",
+          "title": "Find us on Instagram",
+          "description": "@NGOforUkraine"
+        }
+      ]
+    },
     "aboutUs": {
       "dataHero": {
         "title": "ABOUT US",

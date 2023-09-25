@@ -1,0 +1,55 @@
+
+
+/* Styles section principal */
+.contact-us-section{
+  margin-top: .5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-us-section h2 {
+  text-align: center;
+  width: 80%;
+  color: #333;
+}
+
+.contact-us-section > p {
+  width: 80%;
+  color: var(--color-font-primary);
+  margin-left: 2rem;
+}
+
+/* Styles for the contact method list */
+.contact-methods {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+  margin-left: 1.5rem;
+}
+
+/*Styles for each contact method */
+.contact-method {
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+
+/* Styles for contact method information */
+.method-info{
+  text-align: start;
+  margin-left: 1rem;
+}
+.method-info h3 {
+
+  font-size: 1.2rem;
+  color: var(--color-font-primary);
+}
+
+.method-info p {
+  font-size: 1rem;
+  color: var(--color-font-primary);
+}
