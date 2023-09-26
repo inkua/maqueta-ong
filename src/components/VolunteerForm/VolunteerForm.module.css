@@ -24,6 +24,19 @@
   -o-border-radius: 8px;
 }
 
+.form__message,
+.form__message-error {
+  margin: 0 auto;
+}
+
+.form__message {
+  color: #00aa00;
+}
+
+.form__message-error {
+  color: #bb0000;
+}
+
 .field:has(input) {
   position: relative;
 }

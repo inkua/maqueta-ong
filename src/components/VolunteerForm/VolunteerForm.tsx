@@ -1,47 +1,60 @@
 import { useState } from 'react';
 import Image from 'next/image';
+import countriesAndSubdivissions from "data/countries_and_subdivissions.json";
 import styles from './VolunteerForm.module.css';
 
-type EventType = React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>;
-
-type ImageForm = {
+type FormProps = {
   imageForm: string;
+  emailToReceiveData: string;
 }
 
-const VolunteerForm = ({ imageForm } : ImageForm) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    birthdate: '',
-    email: '',
-    country: '',
-    region: '',
-    phoneNumber: '',
-    comment: ''
-  });
+const VolunteerForm = ({ imageForm, emailToReceiveData }: FormProps) => {
+  const [countries] = useState(Object.keys(countriesAndSubdivissions));
+  const [regions, setRegions] = useState([]);
+  const [message, setMessage] = useState(""); // state to show a message if the mail was sent
+  const [isError, setIsError] = useState(false); // state to know if it's a error message
 
-  const handleInputChange = (event: EventType) => {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value
-    });
+  const updateRegions = (countrie: string) => {
+    countriesAndSubdivissions[countrie] ?
+      setRegions(countriesAndSubdivissions[countrie].subdivisions) :
+      setRegions([]);
   };
 
-  const cleanData = () => {
-    setFormData({
-      name: '',
-      birthdate: '',
-      email: '',
-      country: '',
-      region: '',
-      phoneNumber: '',
-      comment: ''
-    });
+  const showMessage = (message: string, error = false) => {
+    setMessage(message);
+    if (error) setIsError(true);
+    window.setTimeout(() => {
+      setMessage("");
+      setIsError(false);
+    }, 10000);
   }
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    console.log(formData);
-    cleanData();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      ...Object.fromEntries(formData),
+    };
+
+    e.currentTarget.reset(); //reset form
+
+    try {
+      const response = await fetch(`https://formsubmit.co/${emailToReceiveData}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      }); // send the form data to the email received
+
+      if (response.ok) {
+        showMessage("Your information has been sent."); //show a message
+      } else {
+        throw new Error("The data could not be sent.")
+      }
+    } catch (error) {
+      showMessage(error.message, true); //show a error message
+    }
   };
 
   //calculates the minimum date to be a volunteer, as a test, 12 years old
@@ -58,8 +71,6 @@ const VolunteerForm = ({ imageForm } : ImageForm) => {
             type="text"
             name="name"
             placeholder='Name'
-            value={formData.name}
-            onChange={handleInputChange}
             required
           />
           <Image src="/images/person.svg" alt='person icon' width={18} height={18} className={styles.field__icon} />
@@ -70,8 +81,6 @@ const VolunteerForm = ({ imageForm } : ImageForm) => {
             type="date"
             name="birthdate"
             placeholder="Birthdate"
-            value={formData.birthdate}
-            onChange={handleInputChange}
             max={minDate}
             required
           />
@@ -82,8 +91,6 @@ const VolunteerForm = ({ imageForm } : ImageForm) => {
             type="email"
             name="email"
             placeholder='Email'
-            value={formData.email}
-            onChange={handleInputChange}
             required
           />
           <Image src="/images/mail.svg" alt='email icon' width={18} height={18} className={styles.field__icon} />
@@ -92,23 +99,22 @@ const VolunteerForm = ({ imageForm } : ImageForm) => {
           <select
             className={styles.field__select}
             name="country"
-            value={formData.country}
-            onChange={handleInputChange}
+            onChange={(e) => updateRegions(e.target.value)}
             required
           >
             <option value="">Country</option>
-            <option value="opcion2">Opción 1</option>
-            <option value="opcion3">Opción 2</option>
+            {countries.map((countrie) => (
+              <option value={countrie} key={countrie}>{countrie}</option>
+            ))}
           </select>
           <select
             className={styles.field__select}
             name="region"
-            value={formData.region}
-            onChange={handleInputChange}
             required>
             <option value="">Region</option>
-            <option value="opcion2">Opción 1</option>
-            <option value="opcion3">Opción 2</option>
+            {regions.map((region) => (
+              <option value={region} key={region}>{region}</option>
+            ))}
           </select>
         </div>
         <div className={styles.field}>
@@ -117,8 +123,6 @@ const VolunteerForm = ({ imageForm } : ImageForm) => {
             type="tel"
             name="phoneNumber"
             placeholder='Phone number'
-            value={formData.phoneNumber}
-            onChange={handleInputChange}
             required
           />
           <Image src="/images/phone.svg" alt='phone icon' width={18} height={18} className={styles.field__icon} />
@@ -130,11 +134,13 @@ const VolunteerForm = ({ imageForm } : ImageForm) => {
             id='comment'
             name="comment"
             placeholder='Type a message'
-            value={formData.comment}
-            onChange={handleInputChange}
             required
           />
         </div>
+        {message.length > 0 &&
+            <span className={`${!isError ? styles.form__message : styles["form__message-error"]}`}>
+              {message}
+            </span>}
         <button type="submit" className={`${styles.button} button-transition`}>Send request</button>
       </form>
       <div className={styles.container__image}>
