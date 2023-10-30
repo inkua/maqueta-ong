@@ -12,7 +12,7 @@ const Navbar = () => {
   const [menuList, setMenuList] = useState([]);
   const windowWidth = useWindowSize();
   const { logo, name, pages } = useContextData();
-  const languages = ['EN', 'YKP'];
+  const languages = ['EN', 'UK'];
   const router = useRouter();
 
   //function to change the navbar state
