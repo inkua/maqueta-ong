@@ -1,24 +1,42 @@
-import styles from './SwitcherLanguage.module.css'
+import styles from "./SwitcherLanguage.module.css";
+
+import { useEffect } from "react";
 
 type SwitchProps = {
   languages: string[];
-}
+};
 
 // eslint-disable-next-line react/prop-types
 const SwitcherLanguage: React.FC<SwitchProps> = ({ languages }) => {
+  //Use Effect to load the Script cdn google Translate
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.innerHTML = `
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'uk, en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
+      }
+    `;
+
+    document.body.appendChild(script);
+  }, [languages]);
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = `//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit`;
+
+    document.body.appendChild(script);
+  }, [languages]);
+
   return (
     <div className={styles.switcher}>
-      <input id="switch" className={styles.switcher__input} type="checkbox" />
-      <label htmlFor="switch" className={styles.switcher__label}>
-        <span className={`${styles.switcher__text} ${styles['switcher__text--lang1']}`}>
-          {languages[0]}
-        </span>
-        <span className={`${styles.switcher__text} ${styles['switcher__text--lang2']}`}>
-          {languages[1]}
-        </span>
-      </label>
+      <div
+        id="google_translate_element"
+        className={`google ${styles["google-button"]}`}
+      ></div>
     </div>
-  )
-}
+  );
+};
 
-export default SwitcherLanguage
+export default SwitcherLanguage;

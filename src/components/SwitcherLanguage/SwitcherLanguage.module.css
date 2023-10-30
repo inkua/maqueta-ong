@@ -2,16 +2,22 @@
   display: none;
 }
 
+/* SwitcherLanguage.module.css */
+
 @media (width >= 640px) {
   .switcher {
+    overflow-x: hidden;
     align-self: center;
     display: inline-block;
     position: relative;
-    width: 76px;
     height: 36px;
   }
 
-  .switcher__input {
+  .switcher > * {
+    width: 11rem;
+  }
+
+  /* .switcher__input {
     display: none;
   }
 
@@ -85,5 +91,5 @@
     -moz-transform: translateX(40px);
     -ms-transform: translateX(40px);
     -o-transform: translateX(40px);
-  }
+  } */
 }
